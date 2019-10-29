@@ -8,6 +8,6 @@ class AdminController extends Controller
 {
    public function index()
    {
-   	echo "Test";
+   	return view('admin.admin_login');
    }
 }
