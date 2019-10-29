@@ -63,7 +63,7 @@
 
 					<h2>Login to your account</h2>
 
-					<form class="form-horizontal" action="{{url('/admin_dashboard')}}" method="post">
+					<form class="form-horizontal" action="{{url('/admin-dashboard')}}" method="post">
                          {{csrf_field()}}
 
 
