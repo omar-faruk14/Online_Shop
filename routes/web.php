@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+//Backend 
+Route::get('/admin','AdminController@index');
