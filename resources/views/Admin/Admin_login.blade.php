@@ -4,13 +4,7 @@
 
 <head>
 	
-	<!-- start: Meta -->
-	<meta charset="utf-8">
-	<title>Admin Login</title>
-	<meta name="description" content="Metro Admin Template.">
-	<meta name="author" content="Łukasz Holeczek">
-	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-	<!-- end: Meta -->
+	
 	
 	<!-- start: Mobile Specific -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +63,7 @@
 
 					<h2>Login to your account</h2>
 
-					<form class="form-horizontal" action="{{url('/admin-dashboard')}}" method="post">
+					<form class="form-horizontal" action="{{url('/admin_dashboard')}}" method="post">
                          {{csrf_field()}}
 
 
@@ -131,5 +125,5 @@
 	
 </body>
 
-<!-- Mirrored from bootstrapmaster.com/live/metro/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:57:01 GMT -->
+
 </html>

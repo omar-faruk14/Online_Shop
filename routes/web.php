@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 //Backend 
 Route::get('/admin','AdminController@index');
+Route::post('/admin_dashboard','AdminController@show_dashboard');
