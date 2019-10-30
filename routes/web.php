@@ -33,3 +33,5 @@ Route::get('/Logout','SuperAdminController@logout');
 Route::get('/add_categories','CategoriesController@index');
 Route::get('/all_categories','CategoriesController@all_categories');
 Route::post('/save_categories','CategoriesController@save_categories');
+Route::get('/unactive_category','CategoriesController@unactive_category');
+

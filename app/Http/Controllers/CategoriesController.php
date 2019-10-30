@@ -54,4 +54,9 @@ class CategoriesController extends Controller
         
     }
 
+    public function unactive_category()
+    {
+    	echo 'Test';
+    }
+
 }
