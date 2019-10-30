@@ -34,12 +34,54 @@
 							  </tr>
 						  </thead> 
 
+						  @foreach($all_category_info as $v_category)
 
 
 
+						  <tbody>
+							<tr>
+								<td>{{$v_category->Categories_id}}</td>
+								<td class="center">{{$v_category->Categories_name}}</td>
+								<td class="center">{{$v_category->Categories_description}}</td>
+								<td class="center">
+									@if($v_category->Publication_status==1)
+									<span class="label label-success">Active</span>
+
+									@else  
+									<span class="label label-danger">
+									Unactive</span>
+
+									@endif
+								</td>
+								<td class="center">
+									
+
+									@if($v_category->Publication_status==1)
+									<a class="btn btn-danger" href="#">
+										<i class="halflings-icon white thumbs-down"></i>  
+									</a>
 
 
-						 
+									@else
+                                       <a class="btn btn-success" href="#">
+										<i class="halflings-icon white thumbs-up"></i>  
+									    </a>
+
+
+									@endif
+
+
+									<a class="btn btn-info" href="#">
+										<i class="halflings-icon white edit"></i>  
+									</a>
+									<a class="btn btn-danger" href="#">
+										<i class="halflings-icon white trash"></i> 
+									</a>
+								</td>
+							</tr>
+							
+						  </tbody>
+						  @endforeach
 
 
 
