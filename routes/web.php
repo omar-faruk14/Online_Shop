@@ -36,4 +36,5 @@ Route::post('/save_categories','CategoriesController@save_categories');
 Route::get('/unactive_category/{Categories_id}','CategoriesController@unactive_category');
 Route::get('/active_category/{Categories_id}','CategoriesController@active_category');
 Route::get('/edit_category/{Categories_id}','CategoriesController@edit_category');
+Route::post('/update_category/{Categories_id}','CategoriesController@update_categories');
 
