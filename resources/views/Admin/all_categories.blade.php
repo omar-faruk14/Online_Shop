@@ -1,1 +1,0 @@
-all_categories.blade.php

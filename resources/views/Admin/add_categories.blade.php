@@ -59,7 +59,7 @@
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Publication Status</label>
 							  <div class="controls">
-								<input type="checkbox" name="Publication_status" value="1" >
+								<input type="checkbox" name="Publication_status" value="1" required="">
 							  </div>
 							</div>
 
@@ -73,9 +73,9 @@
 						</form>   
 
 					</div>
-				</div><!--/span-->
+				</div>
 
-			</div><!--/row-->
+			</div>
 
 
 @endsection
