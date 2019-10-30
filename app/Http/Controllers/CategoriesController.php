@@ -89,7 +89,19 @@ class CategoriesController extends Controller
     	
     }
 
-    
+    public function update_category(Request $request,$Categories_id)
+    {
+    	$data=array();
+
+         $data['Categories_name']=$request->Categories_name;
+         $data['Categories_description']=$request->Categories_description;
+         DB::table('tbl_category')
+    	->where('Categories_id',$Categories_id)
+    	->update($data);
+    	Session::put('message','Update Category Successfully !');
+    	return Redirect('/all_categories');
+
+    }
 
 
 }

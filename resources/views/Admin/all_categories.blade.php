@@ -22,6 +22,27 @@
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 						</div>
 					</div>
+
+					<p class="alert-success">
+
+
+					<?php 
+					$message=Session::get('message');
+
+					if($message)
+					{
+						echo $message;
+						Session::put('message',null);
+
+
+					}
+					 ?>
+					</p>
+
+
+
+
+
 					<div class="box-content">
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
