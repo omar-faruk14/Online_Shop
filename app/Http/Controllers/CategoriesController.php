@@ -75,7 +75,7 @@ class CategoriesController extends Controller
 
     public function edit_category($Categories_id)
     {
-    	echo $Categories_id;
+    	return view('admin.edit_category');
 
     }
 
