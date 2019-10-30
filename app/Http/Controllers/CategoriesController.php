@@ -54,9 +54,13 @@ class CategoriesController extends Controller
         
     }
 
-    public function unactive_category()
+    public function unactive_category($Categories_id)
     {
-    	echo 'Test';
+    	DB::table('tbl_category')
+    	->where('Categories_id',$Categories_id)
+    	->update(['Publication_status'=>0]);
+    	return Redirect('/all_categories');
+
     }
 
 }

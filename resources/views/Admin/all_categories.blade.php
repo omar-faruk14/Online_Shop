@@ -57,7 +57,7 @@
 									
 
 									@if($v_category->Publication_status==1)
-									<a class="btn btn-danger" href="{{URL::to('/unactive_category/')}}">
+									<a class="btn btn-danger" href="{{URL::to('/unactive_category/'.$v_category->Categories_id)}}">
 										<i class="halflings-icon white thumbs-down"></i>  
 									</a>
 
