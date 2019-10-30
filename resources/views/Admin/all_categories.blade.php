@@ -63,7 +63,7 @@
 
 
 									@else
-                                       <a class="btn btn-success" href="#">
+                                       <a class="btn btn-success" href="{{URL::to('/active_category/'.$v_category->Categories_id)}}">
 										<i class="halflings-icon white thumbs-up"></i>  
 									    </a>
 
