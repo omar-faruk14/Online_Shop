@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
 //Backend 
 Route::get('/admin','AdminController@index');
 Route::get('/dashboard','AdminController@show_dashboard');
@@ -26,10 +23,7 @@ Route::get('/Logout','SuperAdminController@logout');
 
 
 
-
-
 //Categories Route
-
 Route::get('/add_categories','CategoriesController@index');
 Route::get('/all_categories','CategoriesController@all_categories');
 Route::post('/save_categories','CategoriesController@save_categories');
@@ -38,4 +32,10 @@ Route::get('/active_category/{Categories_id}','CategoriesController@active_categ
 Route::get('/edit_category/{Categories_id}','CategoriesController@edit_category');
 Route::post('/update_category/{Categories_id}','CategoriesController@update_category');
 Route::get('/delete_category/{Categories_id}','CategoriesController@delete_category');
+
+
+//Manufacture Route
+Route::get('/add_manufacture','ManufactureController@index');
+
+
 
