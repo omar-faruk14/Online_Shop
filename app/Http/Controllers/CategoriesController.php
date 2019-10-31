@@ -103,5 +103,11 @@ class CategoriesController extends Controller
 
     }
 
+    public function delete_category($Categories_id)
+    {
+    	echo $Categories_id;
+
+    }
+
 
 }
