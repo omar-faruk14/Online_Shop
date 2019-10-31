@@ -105,7 +105,13 @@ class CategoriesController extends Controller
 
     public function delete_category($Categories_id)
     {
-    	echo $Categories_id;
+    	DB::table('tbl_category') 
+    	->where('Categories_id',$Categories_id)
+    	->delete();
+    	Session::put('message','Category Deleted Successfully !');
+    	return Redirect('/all_categories');
+
+
 
     }
 
