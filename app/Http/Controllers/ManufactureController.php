@@ -10,4 +10,10 @@ class ManufactureController extends Controller
     {
     	return view('admin.add_manufacture');
     }
+
+
+    public function save_manufacture()
+    {
+    	echo "test";
+    }
 }
