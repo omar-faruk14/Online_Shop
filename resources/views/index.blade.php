@@ -46,24 +46,45 @@
       </li> 
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
-      </li>    
+      </li>   
+      <li class="nav-item">
+        <a class="nav-link" href="#">Request</a>
+      </li> 
     </ul>
   </div>  
 </nav>
 
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
-      <h2>About Shop</h2>
-      <h5>Photo of OnlineShop</h5>
-      <div class="fakeimg">Shop Image</div>
-      <p>Thank you for visiting us. ..</p>
-      <h3>Category</h3>
+    <div class="col-sm-3" >
+    
+      <h3 style="text-align:center;display:block;background:#f1f1f1;color:#444;padding:5px;border-radius:2px;border:1px solid #777;">Category</h3>
       
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">Electronics</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Robotics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tools</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="#">Watches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mobile Phone</a>
+        </li>
+     
+        <li class="nav-item">
+          <a class="nav-link" href="#">Laptop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tools</a>
+        </li>
+       
         <li class="nav-item">
           <a class="nav-link" href="#">Robotics</a>
         </li>
@@ -76,19 +97,47 @@
       </ul>
       <hr class="d-sm-none">
     </div>
-    <div class="col-sm-8">
-      <h2>Find your Product here!</h2>
-      <h5>Search  your product, </h5>
-      <div class="fakeimg"> Image</div>
-      <p>Thanks..</p>
-      <p>Your visit is very precious to us. Hope you will be satisfied.Your visit is very precious to us. Hope you will be satisfied.Your visit is very precious to us. Hope you will be satisfied</p>
-      <br>
-      <h2>Your Part</h2>
-      <h5>You can add your own shop product</h5>
-      <div class="fakeimg">Image</div>
-      <p>Nothing..</p>
-      <p>Your visit is very precious to us. Hope you will be satisfied.Your visit is very precious to us. Hope you will be satisfied.Your visit is very precious to us. Hope you will be satisfied.Your visit is very precious to us. Hope you will be satisfied</p>
+    
+    <?php
+    for($x=0; $x<7 ; $x++){
+    ?>
+    <div class="col-sm-3" style="border:1px solid #f1f1f1;padding:5px;margin-bottom:15px;">
+      <h3 style="text-align:center;">Product Name</h3>
+     
+      <div style="margin:10px;padding:5px;"> 
+      <img style="height:200px;width:250px;" src="image/dd.jpeg"/>
+      </div>
+      <h4>Product Description</h4>
+      <p>This is very useful product.This is very useful product.This is very useful product.This is very useful product.</p>
+      <p>Price 5 $</p>
+      <button type="button" class="btn btn-info btn-block">Add to Cart</button>
+     
     </div>
+    <?php
+}
+    ?>
+   
+      <?php
+    for($x=0; $x<8 ; $x++){
+    ?>
+    <div class="col-sm-3" style="border:1px solid #f1f1f1;padding:5px;margin-bottom:15px;">
+      <h3 style="text-align:center;">Product Name</h3>
+     
+      <div style="margin:10px;padding:5px;"> 
+      <img  style="height:200px;width:250px;" src="image/a4.jpg">
+      </div>
+      <h4>Product Description</h4>
+      <p>This is very useful product.This is very useful product.This is very useful product.This is very useful product.</p>
+      <p>Price 5 $</p>
+      <button type="button" class="btn btn-info btn-block">Add to Cart</button>
+     
+    </div>
+    <?php
+}
+    ?>
+  
+    
+    
   </div>
 </div>
 
