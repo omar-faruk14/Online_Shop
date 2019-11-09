@@ -89,4 +89,22 @@ class ManufactureController extends Controller
 
 
     }
-}
+
+          public function edit_manufacture($manufacture_id)
+    {
+
+       $manufacture_info=DB::table('tbl_manufacture')
+       ->where('manufacture_id',$manufacture_id)
+       ->first();
+
+       $manage_edit_manufacture=view ('admin.edit_manufacture')
+        ->with('manufacture_info',$manufacture_info);
+
+        return view('admin.admin_layout')
+        ->with('admin.edit_manufacture',$manage_edit_manufacture);
+
+        
+    }
+
+
+    }
