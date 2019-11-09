@@ -45,14 +45,14 @@
 							<div class="control-group">
 							  <label class="control-label" for="date01">Manufacture Name</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge" name="Categories_name" required="">
+								<input type="text" class="input-xlarge" name="manufacture_name" required="">
 							  </div>
 							</div>
          
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Manufacture Description</label>
 							  <div class="controls">
-								<textarea class="cleditor" name="Categories_description" rows="3" required=""></textarea>
+								<textarea class="cleditor" name="manufacture_description" rows="3" required=""></textarea>
 							  </div>
 							</div>
 
@@ -66,7 +66,7 @@
 
 
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Add Categories</button>
+							  <button type="submit" class="btn btn-primary">Add manufacture</button>
 							  <button type="reset" class="btn">Cancel</button>
 							</div>
 						  </fieldset>

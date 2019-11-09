@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Http\Requests;
+use Session;
+use Illuminate\Support\Facades\Redirect;
+Session_start();
 
 
 class ManufactureController extends Controller
@@ -18,13 +23,13 @@ class ManufactureController extends Controller
     {
     	$data=array();
 
-         $data['Categories_id']=$request->Categories_id;
-         $data['Categories_name']=$request->Categories_name;
-         $data['Categories_description']=$request->Categories_description;
+         $data['manufacture_id']=$request->manufacture_id;
+         $data['manufacture_name']=$request->manufacture_name;
+         $data['manufacture_description']=$request->manufacture_description;
          $data['Publication_status']=$request->Publication_status;
 
-         DB::table('tbl_category')->insert($data);
+         DB::table('tbl_manufacture')->insert($data);
          Session::put('message','Add Category Successfully !');
-         return Redirect('/add_categories');
+         return Redirect('/add_manufacture');
     }
 }
