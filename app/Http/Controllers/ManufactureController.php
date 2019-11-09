@@ -36,6 +36,6 @@ class ManufactureController extends Controller
 
     public function all_manufacture()
     {
-        echo "test";
+        return view('admin.all_manufacture');
     }
 }
