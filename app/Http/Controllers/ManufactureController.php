@@ -18,6 +18,7 @@ class ManufactureController extends Controller
     	return view('admin.add_manufacture'); 
     }
 
+    //Save manufacture by this function
 
     public function save_manufacture(Request $request)
     {
@@ -31,5 +32,10 @@ class ManufactureController extends Controller
          DB::table('tbl_manufacture')->insert($data);
          Session::put('message','Add Category Successfully !');
          return Redirect('/add_manufacture');
+    }
+
+    public function all_manufacture()
+    {
+        echo "test";
     }
 }

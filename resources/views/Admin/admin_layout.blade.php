@@ -339,7 +339,7 @@
 						<li><a href="{{URL::to('/add_categories')}}"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Categories</span></a></li>
 
 
-						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet">All Manufacture</span></a></li>
+						<li><a href="{{URL::to('/all_manufacture')}}"><i class="icon-eye-open"></i><span class="hidden-tablet">All Manufacture</span></a></li>
 						<li><a href="{{URL::to('/add_manufacture')}}"><i class="icon-dashboard"></i><span class="hidden-tablet">Add Manufacture</span></a></li>
 
 
@@ -410,6 +410,7 @@
 	</footer>
 	
 	<!-- start: JavaScript-->
+
 
 		<script src="{{asset('backend/js/jquery-1.9.1.min.js')}}"></script>
 	    <script src="{{asset('backend/js/jquery-migrate-1.0.0.min.js')}}"></script>
