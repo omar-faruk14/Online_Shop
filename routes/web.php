@@ -36,7 +36,7 @@ Route::get('/delete_category/{Categories_id}','CategoriesController@delete_categ
 
 
 
-//Manufacture Route
+//Manufacture or Brand Route
 Route::get('/add_manufacture','ManufactureController@index');
 Route::post('/save_manufacture','ManufactureController@save_manufacture');
 Route::get('/all_manufacture','ManufactureController@all_manufacture');
@@ -45,6 +45,15 @@ Route::get('/active_manufacture/{manufacture_id}','ManufactureController@active_
 Route::get('/edit_manufacture/{manufacture_id}','ManufactureController@edit_manufacture');
 Route::post('/update_manufacture/{manufacture_id}','ManufactureController@update_manufacture');
 Route::get('/delete_manufacture/{manufacture_id}','ManufactureController@delete_manufacture');
+
+
+// Product route
+Route::get('/add_product','productController@index');
+Route::get('/all_product','productController@all_product');
+
+
+
+
 
 
 
