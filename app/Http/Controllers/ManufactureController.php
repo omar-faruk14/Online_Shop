@@ -36,6 +36,17 @@ class ManufactureController extends Controller
 
     public function all_manufacture()
     {
-        return view('admin.all_manufacture');
+        
+
+
+        $all_manufacture_info=DB::table('tbl_manufacture')->get();
+        
+        $manage_manufacture=view ('admin.all_manufacture')
+        ->with('all_manufacture_info',$all_manufacture_info);
+
+        return view('admin.admin_layout')
+        ->with('admin.all_manufacture',$manage_manufacture);
+        
+
     }
 }
