@@ -34,10 +34,15 @@ Route::post('/update_category/{Categories_id}','CategoriesController@update_cate
 Route::get('/delete_category/{Categories_id}','CategoriesController@delete_category');
 
 
+
+
 //Manufacture Route
 Route::get('/add_manufacture','ManufactureController@index');
 Route::post('/save_manufacture','ManufactureController@save_manufacture');
 Route::get('/all_manufacture','ManufactureController@all_manufacture');
+Route::get('/unactive_manufacture/{manufacture_id}','ManufactureController@unactive_manufacture');
+Route::get('/active_manufacture/{manufacture_id}','ManufactureController@active_manufacture');
+Route::get('/edit_manufacture/{manufacture_id}','ManufactureController@edit_manufacture');
 
 
 
