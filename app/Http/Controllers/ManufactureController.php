@@ -74,4 +74,19 @@ class ManufactureController extends Controller
         return Redirect('/all_manufacture');
 
     }
+
+
+      //this function delete manufacture
+
+    public function delete_manufacture($manufacture_id)
+    {
+        DB::table('tbl_manufacture') 
+        ->where('manufacture_id',$manufacture_id)
+        ->delete();
+        Session::put('message','manufacture Deleted Successfully !');
+        return Redirect('/all_manufacture');
+
+
+
+    }
 }
