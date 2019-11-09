@@ -34,6 +34,8 @@ class ManufactureController extends Controller
          return Redirect('/add_manufacture');
     }
 
+    // by this function show all manufacture in the manufacture page
+
     public function all_manufacture()
     {
         
@@ -47,6 +49,17 @@ class ManufactureController extends Controller
         return view('admin.admin_layout')
         ->with('admin.all_manufacture',$manage_manufacture);
         
+
+    }
+
+
+
+    public function unactive_manufacture($manufacture_id)
+    {
+        DB::table('tbl_manufacture')
+        ->where('manufacture_id',$manufacture_id)
+        ->update(['Publication_status'=>0]);
+        return Redirect('/all_manufacture');
 
     }
 }
