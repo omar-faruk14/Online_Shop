@@ -30,7 +30,7 @@ class ManufactureController extends Controller
          $data['Publication_status']=$request->Publication_status;
 
          DB::table('tbl_manufacture')->insert($data);
-         Session::put('message','Add Category Successfully !');
+         Session::put('message','Add manufacture Successfully !');
          return Redirect('/add_manufacture');
     }
 
@@ -90,6 +90,8 @@ class ManufactureController extends Controller
 
     }
 
+    // this function edit manufacture items
+
           public function edit_manufacture($manufacture_id)
     {
 
@@ -104,6 +106,21 @@ class ManufactureController extends Controller
         ->with('admin.edit_manufacture',$manage_edit_manufacture);
 
         
+    }
+
+
+    public function update_manufacture(Request $request,$manufacture_id)
+    {
+        $data=array();
+
+         $data['manufacture_name']=$request->manufacture_name;
+         $data['manufacture_description']=$request->manufacture_description;
+         DB::table('tbl_manufacture')
+        ->where('manufacture_id',$manufacture_id)
+        ->update($data);
+        Session::put('message','Update manufacture Successfully !');
+        return Redirect('/all_manufacture');
+
     }
 
 
