@@ -41,81 +41,128 @@
 			<form class="form-horizontal" action="" method="post">
 				{{ csrf_field()}}
 			  <fieldset>
+
+			  	<!-- Product Name Form -->
 				
 				
 				<div class="control-group">
-				  <label class="control-label" for="date01">product Name</label>
-				  <div class="controls">
-					<input type="text" class="input-xlarge" name="product_name" required="">
-				  </div>
-				</div>
+	  <label class="control-label" for="date01">Product Name</label>
+	  <div class="controls">
+		<input type="text" class="input-xlarge" name="product_name" required="">
+	  </div>
+	</div>
+
+
+
+				<!-- Product Category Form -->
 
 
 
 
 
 
-			<div class="control-group">
-				<label class="control-label" for="selectError3">Product Category</label>
-				<div class="controls">
-				  <select id="selectError3">
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-					<option>Option 4</option>
-					<option>Option 5</option>
-				  </select>
-				</div>
+	<div class="control-group">
+		<label class="control-label" for="selectError3">Product Category</label>
+		<div class="controls">
+		  <select id="selectError3">
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+		  </select>
+		</div>
+	  </div>
+
+
+
+<!-- product manufacture Form -->
+
+
+	  <div class="control-group">
+		<label class="control-label" for="selectError3">Manufacture Name</label>
+		<div class="controls">
+		  <select id="selectError3">
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+		  </select>
+		</div>
+	  </div>
+
+
+<!-- product short description form -->
+
+	<div class="control-group hidden-phone">
+	  <label class="control-label" for="textarea2">Product Short description</label>
+	  <div class="controls">
+		<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
+	  </div>
+	</div>
+
+
+<!-- product long description form -->
+
+	<div class="control-group hidden-phone">
+	  <label class="control-label" for="textarea2">Product Long description</label>
+	  <div class="controls">
+		<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
+	  </div>
+	</div>
+
+<!-- product price form -->
+
+	<div class="control-group">
+	  <label class="control-label" for="date01">Product Price</label>
+	  <div class="controls">
+		<input type="text" class="input-xlarge" name="product_name" required="">
+	  </div>
+	</div>
+
+<!-- product image input form -->
+
+<div class="control-group">
+			  <label class="control-label" for="fileInput">Product Image</label>
+			  <div class="controls">
+				<input class="input-file uniform_on" id="fileInput" type="file">
 			  </div>
+			</div>  
+
+
+ <!-- Product Size -->
+ <div class="control-group">
+	  <label class="control-label" for="date01">Product Size</label>
+	  <div class="controls">
+		<input type="text" class="input-xlarge" name="product_name" required="">
+	  </div>
+	</div>
+
+
+<!-- Product Color -->
+
+
+	<div class="control-group">
+	  <label class="control-label" for="date01">Product Color</label>
+	  <div class="controls">
+		<input type="text" class="input-xlarge" name="product_name" required="">
+	  </div>
+	</div>
+
+
+<!-- product status form -->
+
+	<div class="control-group hidden-phone">
+	  <label class="control-label" for="textarea2">product Status</label>
+	  <div class="controls">
+		<input type="checkbox" name="product_status" value="1" required="">
+	  </div>
+	</div>
 
 
 
-
-
-
-			  <div class="control-group">
-				<label class="control-label" for="selectError3">Manufacture Name</label>
-				<div class="controls">
-				  <select id="selectError3">
-					<option>Option 1</option>
-					<option>Option 2</option>
-					<option>Option 3</option>
-					<option>Option 4</option>
-					<option>Option 5</option>
-				  </select>
-				</div>
-			  </div>
-
-
-
-
-				<div class="control-group hidden-phone">
-				  <label class="control-label" for="textarea2">Product Short description</label>
-				  <div class="controls">
-					<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
-				  </div>
-				</div>
-
-
-
-
-				<div class="control-group hidden-phone">
-				  <label class="control-label" for="textarea2">Product Long description</label>
-				  <div class="controls">
-					<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
-				  </div>
-				</div>
-
-
-
-
-				<div class="control-group hidden-phone">
-				  <label class="control-label" for="textarea2">product Status</label>
-				  <div class="controls">
-					<input type="checkbox" name="product_status" value="1" required="">
-				  </div>
-				</div>
-
+<!-- submit form -->
 
 
 				<div class="form-actions">
