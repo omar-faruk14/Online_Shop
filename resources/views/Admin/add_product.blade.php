@@ -96,7 +96,16 @@
 		<div class="controls">
 		  <select id="selectError3">
 			<option>Select Manufacture</option>
-         
+         <?php 
+         $all_published_manufacture=DB::table('tbl_manufacture')
+          ->where('publication_status',1)
+          ->get();
+
+          foreach ($all_published_manufacture as $v_manufacture) 
+
+          { ?>
+          	<option>{{$v_manufacture->manufacture_name}}</option>
+          <?php } ?>
 			
 		  </select>
 		</div>
