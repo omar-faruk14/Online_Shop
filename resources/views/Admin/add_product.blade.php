@@ -38,7 +38,7 @@
 		</p>
 
 		<div class="box-content">
-			<form class="form-horizontal" action="{{url('/save_product')}}" method="post">
+			<form class="form-horizontal" action="{{url('/save_product')}}" method="post" enctype="multipart/from-data">
 				{{ csrf_field()}}
 			  <fieldset>
 
@@ -65,7 +65,22 @@
 		<label class="control-label" for="selectError3">Product Category</label>
 		<div class="controls">
 		  <select id="selectError3">
-			<option>Option 1</option>
+		  	<option>Select Categories</option>
+         <?php 
+         $all_published_category=DB::table('tbl_category')
+          ->where('publication_status',1)
+          ->get();
+
+          foreach ($all_published_category as $v_category) 
+
+          { ?>
+          	<option>{{$v_category->Categories_name}}</option>
+          <?php } ?>
+
+
+         
+
+			
 			
 		  </select>
 		</div>
@@ -80,7 +95,8 @@
 		<label class="control-label" for="selectError3">Manufacture Name</label>
 		<div class="controls">
 		  <select id="selectError3">
-			<option>Option 1</option>
+			<option>Select Manufacture</option>
+         
 			
 		  </select>
 		</div>
