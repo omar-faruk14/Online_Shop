@@ -50,6 +50,7 @@ Route::get('/delete_manufacture/{manufacture_id}','ManufactureController@delete_
 // Product route
 Route::get('/add_product','productController@index');
 Route::get('/all_product','productController@all_product');
+Route::post('/save_product','productController@save_product');
 
 
 

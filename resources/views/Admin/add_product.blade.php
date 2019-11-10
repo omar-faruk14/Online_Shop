@@ -38,7 +38,7 @@
 		</p>
 
 		<div class="box-content">
-			<form class="form-horizontal" action="{{url('/save_product')}}" method="post" enctype="multipart/from-data">
+			<form class="form-horizontal" action="{{url('/save_product')}}" method="post" enctype="multipart/form-data">
 				{{ csrf_field()}}
 			  <fieldset>
 
