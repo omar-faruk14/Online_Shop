@@ -38,7 +38,7 @@
 		</p>
 
 		<div class="box-content">
-			<form class="form-horizontal" action="" method="post">
+			<form class="form-horizontal" action="{{url('/save_product')}}" method="post">
 				{{ csrf_field()}}
 			  <fieldset>
 
@@ -66,10 +66,7 @@
 		<div class="controls">
 		  <select id="selectError3">
 			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
-			<option>Option 4</option>
-			<option>Option 5</option>
+			
 		  </select>
 		</div>
 	  </div>
@@ -84,10 +81,7 @@
 		<div class="controls">
 		  <select id="selectError3">
 			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
-			<option>Option 4</option>
-			<option>Option 5</option>
+			
 		  </select>
 		</div>
 	  </div>
@@ -98,7 +92,7 @@
 	<div class="control-group hidden-phone">
 	  <label class="control-label" for="textarea2">Product Short description</label>
 	  <div class="controls">
-		<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
+		<textarea class="cleditor" name="product_short_description" rows="3" required=""></textarea>
 	  </div>
 	</div>
 
@@ -108,7 +102,7 @@
 	<div class="control-group hidden-phone">
 	  <label class="control-label" for="textarea2">Product Long description</label>
 	  <div class="controls">
-		<textarea class="cleditor" name="product_description" rows="3" required=""></textarea>
+		<textarea class="cleditor" name="product_long_description" rows="3" required=""></textarea>
 	  </div>
 	</div>
 
@@ -117,7 +111,7 @@
 	<div class="control-group">
 	  <label class="control-label" for="date01">Product Price</label>
 	  <div class="controls">
-		<input type="text" class="input-xlarge" name="product_name" required="">
+		<input type="text" class="input-xlarge" name="product_price" required="">
 	  </div>
 	</div>
 
@@ -126,7 +120,7 @@
 <div class="control-group">
 			  <label class="control-label" for="fileInput">Product Image</label>
 			  <div class="controls">
-				<input class="input-file uniform_on" id="fileInput" type="file">
+				<input class="input-file uniform_on"  name="product_image" id="fileInput" type="file">
 			  </div>
 			</div>  
 
@@ -135,7 +129,7 @@
  <div class="control-group">
 	  <label class="control-label" for="date01">Product Size</label>
 	  <div class="controls">
-		<input type="text" class="input-xlarge" name="product_name" required="">
+		<input type="text" class="input-xlarge" name="product_size" required="">
 	  </div>
 	</div>
 
@@ -146,7 +140,7 @@
 	<div class="control-group">
 	  <label class="control-label" for="date01">Product Color</label>
 	  <div class="controls">
-		<input type="text" class="input-xlarge" name="product_name" required="">
+		<input type="text" class="input-xlarge" name="product_color" required="">
 	  </div>
 	</div>
 
