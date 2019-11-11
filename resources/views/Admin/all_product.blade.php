@@ -49,7 +49,7 @@
 			  <tr>
 				  <th>Product ID</th>
 				  <th>Product Name</th>
-				  <th>Product Description</th>
+				 
 				  <th>Product Image</th>
 				  <th>Product Price</th>
 				   <th>Category id</th>
@@ -67,7 +67,7 @@
 			<tr>
 				<td>{{$v_product->product_id}}</td>
 				<td class="center">{{($v_product->product_name)}}</td>
-				<td class="center">{{$v_product->product_short_description}}</td>
+				
 
 
 				<td> <img src="{{URL::to($v_product->product_image)}}" style="height: 80px; width: 80px">   </td>
