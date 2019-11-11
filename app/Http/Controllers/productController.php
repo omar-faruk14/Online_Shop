@@ -39,14 +39,33 @@ public function save_product(Request $request)
 
 
    
-     
+     if($request->hasfile('product_image'))
+     {
+
+     	$file=$request->product_image;
+
+     	$extention=$file->getClientOriginalExtension();
+     	$filename=time().'.'.$extention;
+     	$image_url= $file->storeAS('public/upload',$filename);
+
+     	$success=$image_url;
+
+
+          if($success)
+
+      {
+        $data['product_image']=$image_url;
+   		DB::table('tbl_products')->insert($data);
+		 Session::put('message','Product Add Successfully !');
+        return Redirect('/add_product');
+    	}
+
+     }
 
 
 
 
-    echo "<pre>";
-    print_r($data);
-   echo "</pre>";
+
 
 
  }
