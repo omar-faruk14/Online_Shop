@@ -89,4 +89,14 @@ public function all_product()
  }
 
 
+ public function unactive_product($product_id)
+    {
+        DB::table('tbl_products')
+        ->where('product_id',$product_id)
+        ->update(['product_status'=>0]);
+        return Redirect('/all_product');
+
+    }
+
+
    }
