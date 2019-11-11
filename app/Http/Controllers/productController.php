@@ -46,7 +46,7 @@ public function save_product(Request $request)
 
      	$extention=$file->getClientOriginalExtension();
      	$filename=time().'.'.$extention;
-     	$image_url= $file->storeAS('public/upload',$filename);
+     	$image_url= $file->move('upload/image/',$filename);
 
      	$success=$image_url;
 

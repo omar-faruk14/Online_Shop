@@ -52,24 +52,33 @@
 				  <th>Product Description</th>
 				  <th>Product Image</th>
 				  <th>Product Price</th>
-				   <th>Category Name</th>
-				  <th>Manufacture Name</th>
+				   <th>Category id</th>
+				  <th>Manufacture id</th>
 				  <th>Status</th>
 				  <th>Actions</th>
 			  </tr>
 		  </thead> 
 
-		  @foreach($all_category_info as $v_category)
+		  @foreach($all_product_info as $v_product)
 
 
 
 		  <tbody>
 			<tr>
-				<td>{{$v_category->Categories_id}}</td>
-				<td class="center">{{$v_category->Categories_name}}</td>
-				<td class="center">{{$v_category->Categories_description}}</td>
+				<td>{{$v_product->product_id}}</td>
+				<td class="center">{{($v_product->product_name)}}</td>
+				<td class="center">{{$v_product->product_short_description}}</td>
+
+
+				<td> <img src="{{URL::to($v_product->product_image)}}" style="height: 80px; width: 80px">   </td>
+
+				<td class="center">{{($v_product->product_price)}}</td>
+
+
+				<td class="center">{{$v_product->Categories_id}}</td>
+				<td class="center">{{$v_product->manufacture_id}}</td>
 				<td class="center">
-					@if($v_category->Publication_status==1)
+					@if($v_product->product_status==1)
 					<span class="label label-success">Active</span>
 
 					@else  
@@ -81,14 +90,14 @@
 				<td class="center">
 					
 
-					@if($v_category->Publication_status==1)
-					<a class="btn btn-danger" href="{{URL::to('/unactive_category/'.$v_category->Categories_id)}}">
+					@if($v_product->product_status==1)
+					<a class="btn btn-danger" href="{{URL::to('/unactive_product/'.$v_product->product_id)}}">
 						<i class="halflings-icon white thumbs-down"></i>  
 					</a>
 
 
 					@else
-	                   <a class="btn btn-success" href="{{URL::to('/active_category/'.$v_category->Categories_id)}}">
+	                   <a class="btn btn-success" href="{{URL::to('/active_product/'.$v_product->product_id)}}">
 						<i class="halflings-icon white thumbs-up"></i>  
 					    </a>
 
@@ -96,10 +105,10 @@
 					@endif
 
 
-					<a class="btn btn-info" href="{{URL::to('/edit_category/'.$v_category->Categories_id)}}">
+					<a class="btn btn-info" href="{{URL::to('/edit_product/'.$v_product->product_id)}}">
 						<i class="halflings-icon white edit"></i>  
 					</a>
-					<a class="btn btn-danger" href="{{URL::to('/delete_category/'.$v_category->Categories_id)}}">
+					<a class="btn btn-danger" href="{{URL::to('/delete_product/'.$v_product->product_id)}}">
 						<i class="halflings-icon white trash"></i> 
 					</a>
 				</td>
