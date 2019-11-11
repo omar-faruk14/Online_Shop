@@ -64,7 +64,7 @@
 	<div class="control-group">
 		<label class="control-label" for="selectError3">Product Category</label>
 		<div class="controls">
-		  <select id="selectError3">
+		  <select id="selectError3" name="Categories_id" required="">
 		  	<option>Select Categories</option>
          <?php 
          $all_published_category=DB::table('tbl_category')
@@ -74,7 +74,7 @@
           foreach ($all_published_category as $v_category) 
 
           { ?>
-          	<option>{{$v_category->Categories_name}}</option>
+          	<option value="{{$v_category->Categories_id}}">{{$v_category->Categories_name}}</option>
           <?php } ?>
 
 
@@ -94,7 +94,7 @@
 	  <div class="control-group">
 		<label class="control-label" for="selectError3">Manufacture Name</label>
 		<div class="controls">
-		  <select id="selectError3">
+		  <select id="selectError3" name="manufacture_id" required="">
 			<option>Select Manufacture</option>
          <?php 
          $all_published_manufacture=DB::table('tbl_manufacture')
@@ -104,7 +104,7 @@
           foreach ($all_published_manufacture as $v_manufacture) 
 
           { ?>
-          	<option>{{$v_manufacture->manufacture_name}}</option>
+          	<option value="{{$v_manufacture->manufacture_id}}">{{$v_manufacture->manufacture_name}}</option>
           <?php } ?>
 			
 		  </select>
