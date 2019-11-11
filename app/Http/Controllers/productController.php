@@ -63,10 +63,18 @@ public function save_product(Request $request)
      }
 
 
-
-
-
-
-
  }
+
+
+
+
+
+public function all_product()
+{
+    return view('admin.all_product');
+}
+
+
+
+
    }
