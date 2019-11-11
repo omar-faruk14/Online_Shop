@@ -66,7 +66,7 @@ public function save_product(Request $request)
  }
 
 
-
+// Showing All Product By this code
 
 
 public function all_product()
@@ -78,15 +78,15 @@ public function all_product()
     ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
     ->get();
         
-        // $manage_product=view ('admin.all_product')
-        // ->with('all_product_info',$all_product_info);
+        $manage_product=view ('admin.all_product')
+        ->with('all_product_info',$all_product_info);
 
-        // return view('admin.admin_layout')
-        // ->with('admin.all_product',$manage_product);
-    echo "<pre>";
-    print_r( $all_product_info);
-    echo "</pre>";
-}
+        return view('admin.admin_layout')
+        ->with('admin.all_product',$manage_product);
+
+
+
+ }
 
 
    }

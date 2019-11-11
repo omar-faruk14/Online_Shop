@@ -52,8 +52,8 @@
 				 
 				  <th>Product Image</th>
 				  <th>Product Price</th>
-				   <th>Category id</th>
-				  <th>Manufacture id</th>
+				   <th>Category Name</th>
+				  <th>Manufacture Name</th>
 				  <th>Status</th>
 				  <th>Actions</th>
 			  </tr>
@@ -75,8 +75,8 @@
 				<td class="center">{{($v_product->product_price)}}</td>
 
 
-				<td class="center">{{$v_product->Categories_id}}</td>
-				<td class="center">{{$v_product->manufacture_id}}</td>
+				<td class="center">{{$v_product->Categories_name}}</td>
+				<td class="center">{{$v_product->manufacture_name}}</td>
 				<td class="center">
 					@if($v_product->product_status==1)
 					<span class="label label-success">Active</span>
