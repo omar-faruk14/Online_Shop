@@ -110,4 +110,17 @@ public function all_product()
     }
 
 
+      public function delete_product($product_id)
+    {
+        DB::table('tbl_products') 
+        ->where('product_id',$product_id)
+        ->delete();
+        Session::put('message','product Deleted Successfully !');
+        return Redirect('/all_product');
+
+
+
+    }
+
+
    }
