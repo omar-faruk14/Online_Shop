@@ -71,10 +71,16 @@ public function save_product(Request $request)
 
 public function all_product()
 {
-    return view('admin.all_product');
+    
+
+    $all_product_info=DB::table('tbl_products')->get();
+        
+        $manage_product=view ('admin.all_product')
+        ->with('all_product_info',$all_product_info);
+
+        return view('admin.admin_layout')
+        ->with('admin.all_product',$manage_product);
 }
-
-
 
 
    }
