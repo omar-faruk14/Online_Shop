@@ -99,4 +99,15 @@ public function all_product()
     }
 
 
+
+    public function active_product($product_id)
+    {
+        DB::table('tbl_products')
+        ->where('product_id',$product_id)
+        ->update(['product_status'=>1]);
+        return Redirect('/all_product');
+
+    }
+
+
    }
