@@ -1,3 +1,9 @@
+<?php
+     require_once "config.php";
+	 $loginUrl = $gClient->createAuthUrl();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,8 +85,10 @@
       
       </label>
     </div>
-    <button style="margin-bottom:10px;"type="submit" class="btn btn-secondary btn-block">Login</button>
-  </form>
+	</form>
+   <button type="submit" style="padding:5px;" class=" btn-primary">Submit</button>
+   <button onclick="window.location='<?php echo $loginUrl; ?>' " style="padding:5px;" class=" btn-danger">Login With Google Account</button>
+  <br>
   <a  style="margin:5px;" href="register.blade.php">Register here</a>or<a style="margin:2px;" href="forgot.blade.php">Forgot password?</a>
   </div>
       <hr class="d-sm-none">

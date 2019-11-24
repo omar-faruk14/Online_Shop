@@ -17,10 +17,11 @@
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>Onile Shop is a place of your desire</h1>
+<div class="py-3 bg-light" style="text-align:center;">
+ <h1>Onile Shop is a place of your desire</h1>
   <p>All kinds of product is available here. Hopfully it will be very userful for you.</p> 
 </div>
+
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="#">OnlineShop</a>
