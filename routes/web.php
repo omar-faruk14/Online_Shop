@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+//Frontend Online_shop...............
+Route::get('/','HomeController@index');
 
 //Backend 
 Route::get('/admin','AdminController@index');
-Route::get('/dashboard','AdminController@show_dashboard');
+Route::get('/dashboard','SuperAdminController@index');
 Route::post('/admin-dashboard','AdminController@dashboard');
 Route::get('/Logout','SuperAdminController@logout');
 

@@ -10,18 +10,19 @@ use Illuminate\Support\Facades\Redirect;
 Session_start();
 class AdminController extends Controller
 {
+
+
+  /*Admin Login Panel Route Function*/
     public function index()
     {
     	return view('admin.admin_login');
     }
 
 
-    public function show_dashboard()
-    {
 
-    	return view('admin.admin_dashboard');
-    }
 
+/*Showing Dashboard checking by email and password*/
+   
     public function dashboard(Request $request)
     {
     	

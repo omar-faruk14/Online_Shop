@@ -13,6 +13,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
+        $this->AdminAuthCheck();
       return view('admin.add_categories');
 
     }
@@ -23,7 +24,7 @@ class CategoriesController extends Controller
 //for show all categories
     public function all_categories()
     {
-
+           $this->AdminAuthCheck();
 
     	$all_category_info=DB::table('tbl_category')->get();
     	
@@ -75,7 +76,7 @@ class CategoriesController extends Controller
 
     public function edit_category($Categories_id)
     {
-
+       $this->AdminAuthCheck();
        $category_info=DB::table('tbl_category')
        ->where('Categories_id',$Categories_id)
        ->first();
@@ -114,6 +115,21 @@ class CategoriesController extends Controller
 
 
     }
+
+
+    public function AdminAuthCheck()
+    {
+
+        $admin_id=session::get('admin_id');
+       if ($admin_id) {
+         return;
+       }
+       else
+       {
+        return Redirect::to('/admin')->send();
+       }
+
+   }
 
 
 }
