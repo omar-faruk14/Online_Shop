@@ -15,6 +15,7 @@ class ManufactureController extends Controller
 	//go to add manufacture page
     public function index()
     {
+           $this->AdminAuthCheck();//check valid admin or not
     	return view('admin.add_manufacture'); 
     }
 
@@ -40,7 +41,7 @@ class ManufactureController extends Controller
     {
         
 
-
+     $this->AdminAuthCheck();
         $all_manufacture_info=DB::table('tbl_manufacture')->get();
         
         $manage_manufacture=view ('admin.all_manufacture')
@@ -122,6 +123,22 @@ class ManufactureController extends Controller
         return Redirect('/all_manufacture');
 
     }
+
+/*Admin Authentacation Check By this function controller*/
+
+     public function AdminAuthCheck()
+    {
+
+        $admin_id=session::get('admin_id');
+       if ($admin_id) {
+         return;
+       }
+       else
+       {
+        return Redirect::to('/admin')->send();
+       }
+
+   }
 
 
     }

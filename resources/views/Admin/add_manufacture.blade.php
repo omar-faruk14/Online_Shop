@@ -1,6 +1,9 @@
 @extends('admin.admin_layout')
 @section('admin_content')
 
+
+<!-- Manufacture HTML form code -->
+
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -19,6 +22,9 @@
 						<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Manufaceture</h2>
 						
 					</div>
+
+
+					<!-- Session failed or success Message showing This code -->
 
 
                      <p class="alert-success">
@@ -41,6 +47,9 @@
 						<form class="form-horizontal" action="{{url('/save_manufacture')}}" method="post">
 							{{ csrf_field()}}
 						  <fieldset>
+
+
+						  	<!-- Manufacture Name field -->
 							
 							<div class="control-group">
 							  <label class="control-label" for="date01">Manufacture Name</label>
@@ -48,6 +57,9 @@
 								<input type="text" class="input-xlarge" name="manufacture_name" required="">
 							  </div>
 							</div>
+
+
+							<!-- Manufacture Description Field -->
          
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Manufacture Description</label>
@@ -55,6 +67,9 @@
 								<textarea class="cleditor" name="manufacture_description" rows="3" required=""></textarea>
 							  </div>
 							</div>
+
+
+							<!-- Publication Status -->
 
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Publication Status</label>
@@ -64,6 +79,7 @@
 							</div>
 
 
+                     <!-- ADD manufacture Submit button html code -->
 
 							<div class="form-actions">
 							  <button type="submit" class="btn btn-primary">Add manufacture</button>

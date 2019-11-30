@@ -1,6 +1,10 @@
 extends('admin.admin_layout')
 @section('admin_content')
 
+
+
+<!-- Edit manufacture html form -->
+
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -19,6 +23,8 @@ extends('admin.admin_layout')
 						<h2><i class="halflings-icon edit"></i><span class="break"></span>Update manufacture</h2>
 						
 					</div>
+
+					<!-- Display message showing failed or success edit -->
 
 
                      <p class="alert-success">
@@ -41,6 +47,9 @@ extends('admin.admin_layout')
 						<form class="form-horizontal" action="{{url('/update_manufacture/'.$manufacture_info->manufacture_id)}}" method="post">
 							{{ csrf_field()}}
 						  <fieldset>
+
+
+						  	<!-- Manufacture Name edit -->
 							
 							<div class="control-group">
 							  <label class="control-label" for="date01">manufacture Name</label>
@@ -48,6 +57,8 @@ extends('admin.admin_layout')
 								<input type="text" class="input-xlarge" name="manufacture_name" value="{{$manufacture_info->manufacture_name}}">
 							  </div>
 							</div>
+
+							<!-- Categories DESCRIPTION Edit field  -->
          
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">manufacture Description</label>

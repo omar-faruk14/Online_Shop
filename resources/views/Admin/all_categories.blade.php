@@ -2,7 +2,7 @@
 @section('admin_content')
 
 
-
+<!-- All categories Form Display All Category -->
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -22,6 +22,8 @@
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 						</div>
 					</div>
+
+					<!-- Success or failed Message display -->
 
 					<p class="alert-success">
 
@@ -54,6 +56,9 @@
 								  <th>Actions</th>
 							  </tr>
 						  </thead> 
+
+
+						  <!-- For each category Display loop code -->
 
 						  @foreach($all_category_info as $v_category)
 

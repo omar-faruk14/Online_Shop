@@ -17,8 +17,8 @@ class SuperAdminController extends Controller
 
     public function index()
     {
-    	$this->AdminAuthCheck();
-    	return view('admin.admin_dashboard');
+    	$this->AdminAuthCheck();//valid admin user check
+    	return view('admin.admin_dashboard'); //redirect admin_dashboard.blade.php
     }
 
 
@@ -31,7 +31,7 @@ class SuperAdminController extends Controller
     public function logout()
     {
 
-    	Session::flush();
+    	Session::flush();  //flush all session
     	return Redirect::to('/admin');
     }
 
@@ -42,7 +42,7 @@ class SuperAdminController extends Controller
     public function AdminAuthCheck()
     {
 
-    	$admin_id=session::get('admin_id');
+    	$admin_id=session::get('admin_id'); 
        if ($admin_id) {
        	 return;
        }

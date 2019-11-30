@@ -2,7 +2,7 @@
 @section('admin_content')
 
 
-
+<!-- All Manufacture Form Display All Manufacture-->
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -54,6 +54,8 @@
 								  <th>Actions</th>
 							  </tr>
 						  </thead> 
+
+						  <!-- For each manufacture Display loop code via database -->
 
 						  @foreach($all_manufacture_info as $v_manufacture)
 

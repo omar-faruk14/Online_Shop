@@ -1,6 +1,8 @@
 @extends('admin.admin_layout')
 @section('admin_content')
 
+<!-- Edit Manufacture Code -->
+
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -19,6 +21,9 @@
 						<h2><i class="halflings-icon edit"></i><span class="break"></span>Update Categories</h2>
 						
 					</div>
+
+
+					<!-- Display session  message by this code -->
 
 
                      <p class="alert-success">
@@ -41,6 +46,9 @@
 						<form class="form-horizontal" action="{{url('/update_category/'.$category_info->Categories_id)}}" method="post">
 							{{ csrf_field()}}
 						  <fieldset>
+
+
+						  	<!-- Categories Name Edit field  -->
 							
 							<div class="control-group">
 							  <label class="control-label" for="date01">Categories Name</label>
@@ -49,6 +57,10 @@
 							  </div>
 							</div>
          
+
+
+
+                      <!-- Categories description Edit field  --> 
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Categories Description</label>
 							  <div class="controls">
@@ -60,7 +72,7 @@
 							</div>
 
 							
-
+                  <!-- Update Categories Submit button  -->
 
 
 							<div class="form-actions">

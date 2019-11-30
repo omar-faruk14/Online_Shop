@@ -18,6 +18,7 @@ class productController extends Controller
 
 public function index()
 {
+   $this->AdminAuthCheck();      //check valid admin or not
 	return view('admin.add_product');
 }
 
@@ -72,7 +73,7 @@ public function save_product(Request $request)
 public function all_product()
 {
     
-
+       $this->AdminAuthCheck();//check valid admin or not
     $all_product_info=DB::table('tbl_products')
     ->join('tbl_category','tbl_products.categories_id','=','tbl_category.categories_id')
     ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
@@ -88,7 +89,7 @@ public function all_product()
 
  }
 
-
+/*Active Product*/
  public function unactive_product($product_id)
     {
         DB::table('tbl_products')
@@ -100,6 +101,9 @@ public function all_product()
 
 
 
+
+/*Update Product Controller function*/
+
     public function active_product($product_id)
     {
         DB::table('tbl_products')
@@ -109,6 +113,9 @@ public function all_product()
 
     }
 
+
+
+/*Delete Product Controller*/
 
       public function delete_product($product_id)
     {
@@ -121,6 +128,23 @@ public function all_product()
 
 
     }
+
+
+    /*Admin Authentacation Check By this function controller*/
+
+     public function AdminAuthCheck()
+    {
+
+        $admin_id=session::get('admin_id');
+       if ($admin_id) {
+         return;
+       }
+       else
+       {
+        return Redirect::to('/admin')->send();
+       }
+
+   }
 
 
    }

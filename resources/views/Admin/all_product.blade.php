@@ -1,7 +1,7 @@
 @extends('admin.admin_layout')
 @section('admin_content')
 
-
+<!-- All Product  Display HTML Table code -->
 
 <ul class="breadcrumb">
 	<li>
@@ -22,6 +22,8 @@
 			<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 		</div>
 	</div>
+
+	<!-- showing Alert message success or failed -->
 
 	<p class="alert-success">
 
@@ -58,6 +60,8 @@
 				  <th>Actions</th>
 			  </tr>
 		  </thead> 
+
+		  <!-- Retrive data from database and display here -->
 
 		  @foreach($all_product_info as $v_product)
 

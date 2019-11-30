@@ -1,6 +1,8 @@
 @extends('admin.admin_layout')
 @section('admin_content')
 
+
+<!-- Add Categories Form -->
 <ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -20,6 +22,11 @@
 						
 					</div>
 
+
+
+
+
+<!-- Session Message showing This code  -->
 
                      <p class="alert-success">
 
@@ -42,12 +49,19 @@
 							{{ csrf_field()}}
 						  <fieldset>
 							
+
+							<!-- Categories Name Field -->
+
+
 							<div class="control-group">
 							  <label class="control-label" for="date01">Categories Name</label>
 							  <div class="controls">
 								<input type="text" class="input-xlarge" name="Categories_name" required="">
 							  </div>
 							</div>
+
+
+							<!-- Categories Description Field -->
          
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Categories Description</label>
@@ -56,12 +70,19 @@
 							  </div>
 							</div>
 
+
+							<!-- Publication Status -->
+
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Publication Status</label>
 							  <div class="controls">
 								<input type="checkbox" name="Publication_status" value="1" required="">
 							  </div>
 							</div>
+
+
+
+							<!-- Submit Add Categories -->
 
 
 

@@ -13,7 +13,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        $this->AdminAuthCheck();
+        $this->AdminAuthCheck(); //valid admin check
       return view('admin.add_categories');
 
     }
@@ -24,12 +24,12 @@ class CategoriesController extends Controller
 //for show all categories
     public function all_categories()
     {
-           $this->AdminAuthCheck();
+           $this->AdminAuthCheck();// valid admin check
 
-    	$all_category_info=DB::table('tbl_category')->get();
+    	$all_category_info=DB::table('tbl_category')->get();//tbl_category table access
     	
     	$manage_category=view ('admin.all_categories')
-    	->with('all_category_info',$all_category_info);
+    	->with('all_category_info',$all_category_info); 
 
     	return view('admin.admin_layout')
     	->with('admin.all_categories',$manage_category);
@@ -38,6 +38,10 @@ class CategoriesController extends Controller
 
     	//return view('admin.all_categories');
     }
+
+
+
+/*Save Categories Function Controller*/
 
     public function save_categories(Request $request)
 
@@ -55,6 +59,11 @@ class CategoriesController extends Controller
         
     }
 
+
+
+
+    /*Unactive categories Function Easily case hide function*/
+
     public function unactive_category($Categories_id)
     {
     	DB::table('tbl_category')
@@ -65,6 +74,9 @@ class CategoriesController extends Controller
     }
 
 
+
+
+/*Active Categories Function controller*/
     public function active_category($Categories_id)
     {
     	DB::table('tbl_category')
@@ -74,6 +86,10 @@ class CategoriesController extends Controller
 
     }
 
+
+
+
+/*Edit Categories Controller*/
     public function edit_category($Categories_id)
     {
        $this->AdminAuthCheck();
@@ -90,6 +106,10 @@ class CategoriesController extends Controller
     	
     }
 
+
+
+    /*Update Categories Controller*/
+
     public function update_category(Request $request,$Categories_id)
     {
     	$data=array();
@@ -104,6 +124,9 @@ class CategoriesController extends Controller
 
     }
 
+
+    /*Delete Categories Controller Function*/
+
     public function delete_category($Categories_id)
     {
     	DB::table('tbl_category') 
@@ -115,6 +138,9 @@ class CategoriesController extends Controller
 
 
     }
+
+
+    /*Admin Authentacation Check either it open or not*/
 
 
     public function AdminAuthCheck()
