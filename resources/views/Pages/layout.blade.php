@@ -333,7 +333,7 @@
 <!-- every loop made each manufacture item -->
  
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="#"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
+                <li><a href="{{URL::to('/show_product_manufacture/'.$v_manufacture->manufacture_id)}}""> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
                 
             </ul>
                <?php } ?>
