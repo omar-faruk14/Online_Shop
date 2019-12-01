@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 
 
@@ -17,9 +8,10 @@
 Route::get('/','HomeController@index');
 
 
-/*shoe categorywise View Route*/
+/*show specific categorywise View Route*/
 Route::get('/show_product_category/{Categories_id}','HomeController@show_product_category');
 Route::get('/show_product_manufacture/{Categories_id}','HomeController@show_product_manufacture');
+Route::get('/view_product/{product_id}','HomeController@view_product');
 
 
 

@@ -146,7 +146,7 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="{{URL::to('/')}}" class="active">Home</a></li>
                                 <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
@@ -333,7 +333,7 @@
 <!-- every loop made each manufacture item -->
  
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="{{URL::to('/show_product_manufacture/'.$v_manufacture->manufacture_id)}}""> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
+                <li><a href="{{URL::to('/show_product_manufacture/'.$v_manufacture->manufacture_id)}}"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
                 
             </ul>
                <?php } ?>
