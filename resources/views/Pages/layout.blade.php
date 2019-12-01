@@ -26,7 +26,7 @@
 
 
 
-
+<!-- image icon display -->
 
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{URL::to('frontend/images/ico/apple-touch-icon-144-precomposed.png')}}">
@@ -39,9 +39,6 @@
 
 
 <!-- Header HTML Code  Email and Phone Number-->
-
-
-
 <body>
     <header id="header">
 
