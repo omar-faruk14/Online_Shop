@@ -49,7 +49,7 @@ class HomeController extends Controller
 
 
 
-
+/*product individual category display function*/
 
     public function Show_Product_category($categories_id)
     {
@@ -78,5 +78,41 @@ class HomeController extends Controller
 
 
     	//return view('pages.categories_base_product');
+    }
+
+
+
+
+/*product individual manufacture display function*/
+
+    public function Show_Product_manufacture($manufacture_id)
+    {
+
+
+$manufacture_base_product=DB::table('tbl_products')
+    ->join('tbl_category','tbl_products.categories_id','=','tbl_category.categories_id')
+    ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')     //join category and manufacture table
+    
+
+
+
+    ->select('tbl_products.*','tbl_category.categories_name','tbl_manufacture.manufacture_name')
+
+
+    ->where('tbl_manufacture.manufacture_id',$manufacture_id)
+    ->where('tbl_products.product_status',1)
+    ->limit(18)
+    ->get();
+
+
+        
+        $manage_manufacture_product=view ('pages.manufacture_base_product')
+        ->with('manufacture_base_product',$manufacture_base_product);    //view product information home_content showing
+        
+
+
+        return view('pages.layout')
+        ->with('pages.manufacture_base_product',$manage_manufacture_product);
+
     }
 }

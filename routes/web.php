@@ -19,6 +19,7 @@ Route::get('/','HomeController@index');
 
 /*shoe categorywise View Route*/
 Route::get('/show_product_category/{Categories_id}','HomeController@show_product_category');
+Route::get('/show_product_manufacture/{Categories_id}','HomeController@show_product_manufacture');
 
 
 
