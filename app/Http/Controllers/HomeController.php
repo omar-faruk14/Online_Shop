@@ -101,6 +101,20 @@ $manufacture_base_product=DB::table('tbl_products')
 /*view product information associated by this function via database data*/
     public function view_product($product_id)
     {
-        return view('pages.product_details');
+            $product_view_details=DB::table('tbl_products')
+    ->join('tbl_category','tbl_products.categories_id','=','tbl_category.categories_id')
+    ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')     //join category and manufacture table
+
+    ->select('tbl_products.*','tbl_category.categories_name','tbl_manufacture.manufacture_name')
+    ->where('tbl_products.product_status',1)
+    ->where('tbl_products.product_id',$product_id)
+    ->first();
+
+      $manage_details_product=view ('pages.product_details')
+        ->with('product_view_details',$product_view_details);    //view product information product_details showing
+        
+        return view('pages.layout')
+        ->with('pages.product_details',$manage_details_product); //return view pages layout
+        //return view('pages.product_details');
     }
 }
