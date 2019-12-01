@@ -271,31 +271,31 @@
 
 
 
-                            <!-- php laravel code for published Categories Home Page -->
+            <!-- php laravel code for published Categories Home Page -->
 
-                            <?php
+            <?php
 
-                            $all_published_Categories=DB::table('tbl_category')
-                            ->where('Publication_status',1)
-                            ->get();
+            $all_published_Categories=DB::table('tbl_category')
+            ->where('Publication_status',1)
+            ->get();
 
-                            foreach($all_published_Categories as $v_category)
+            foreach($all_published_Categories as $v_category)
 
-                            {
+            {
 
-                            ?>
+            ?>
 
 
-                            <!-- Product Categories List -->
-                            
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">{{$v_category->Categories_name}}</a></h4>
-                                </div>
-                            </div>
+            <!-- Product Categories List -->
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a href="{{URL::to('/show_product_category/'.$v_category->Categories_id)}}">{{$v_category->Categories_name}}</a></h4>
+                </div>
+            </div>
 
-                        <?php } ?>
-                        </div><!--/category-products-->
+        <?php } ?>
+        </div><!--/category-products-->
 
 
 

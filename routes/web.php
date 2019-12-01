@@ -16,6 +16,13 @@
 //Frontend Online_shop...............
 Route::get('/','HomeController@index');
 
+
+/*shoe categorywise View Route*/
+Route::get('/show_product_category/{Categories_id}','HomeController@show_product_category');
+
+
+
+
 //Backend 
 Route::get('/admin','AdminController@index');
 Route::get('/dashboard','SuperAdminController@index');
