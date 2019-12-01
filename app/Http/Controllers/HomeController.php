@@ -44,8 +44,39 @@ class HomeController extends Controller
 
 
 
+
+
+
+
+
+
+
     public function Show_Product_category($categories_id)
     {
-      echo $categories_id;
+
+
+      $Category_base_Product=DB::table('tbl_products')
+    ->join('tbl_category','tbl_products.categories_id','=','tbl_category.categories_id')
+    ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')     //join category and manufacture table
+   
+
+    ->select('tbl_products.*','tbl_category.categories_name','tbl_manufacture.manufacture_name')
+    ->where('tbl_category.categories_id',$categories_id)
+    ->where('tbl_products.product_status',1)
+    ->limit(18)
+    ->get();
+
+
+      
+
+
+        $manage_category_base=view ('pages.categories_base_product')
+        ->with('Category_base_Product',$Category_base_Product);    //view product information categories_base_product showing
+       
+        return view('pages.layout')
+        ->with('pages.categories_base_product',$manage_category_base); //return view pages layout
+
+
+    	//return view('pages.categories_base_product');
     }
 }
