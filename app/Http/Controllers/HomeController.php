@@ -66,6 +66,9 @@ class HomeController extends Controller
 
 
 
+
+
+
 /*product individual manufacture display function*/
    public function Show_Product_manufacture($manufacture_id)
     {
@@ -88,8 +91,16 @@ $manufacture_base_product=DB::table('tbl_products')
 
 
 
+
+
+
+
+
+
+
+/*view product information associated by this function via database data*/
     public function view_product($product_id)
     {
-        echo $product_id;
+        return view('pages.product_details');
     }
 }
