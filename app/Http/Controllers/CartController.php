@@ -47,4 +47,17 @@ class CartController extends Controller
         return view('pages.layout')
             ->with('pages.add_to_cart', $manage_published_category);
     }
+
+
+    /*Delete Add_to_cart product*/
+
+    public function delete_from_cart($id)
+    {
+        Cart::remove($id);
+        return Redirect::to('/show_cart');
+    }
+
+
+
+
 }

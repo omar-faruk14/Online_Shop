@@ -61,10 +61,10 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">{{$v_content->getTotal}}</p>
+								<p class="cart_total_price">{{$v_content->getPriceSum()}}</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="{{URL::to('/delete_from_cart/'.$v_content->id)}}"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 
@@ -83,7 +83,7 @@
 
 
 
-	
+
 
 	<section id="do_action">
 		<!-- <div class="container">
