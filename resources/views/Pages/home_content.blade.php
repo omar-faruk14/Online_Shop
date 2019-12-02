@@ -20,16 +20,16 @@ foreach($all_published_product as $v_product) {?>
                 <div class="single-products">
                         <div class="productinfo text-center">
                             <img src="{{URL::to($v_product->product_image)}}" style="height: 207px; width: 183px" alt="" />
-                            <h2>{{$v_product->product_price}}</h2>
+                            <h2>{{$v_product->product_price}} TK</h2>
                             <p>{{$v_product->product_name}}</p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                         <div class="product-overlay">
                             <div class="overlay-content">
-                                <h2>{{$v_product->product_price}}</h2>
+                                <h2>{{$v_product->product_price}} TK</h2>
                                 <a href="{{URL::to('/view_product/'.$v_product->product_id)}}">
                                 <p>{{$v_product->product_name}}</p></a>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                <a href="{{URL::to('/view_product/'.$v_product->product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                             </div>
                         </div>
                 </div>

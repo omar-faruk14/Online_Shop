@@ -58,6 +58,13 @@ Route::get('/delete_product/{product_id}','productController@delete_product');
 
 
 
+/*Cart Controller Route*/
+
+Route::post('/add_to_cart','CartController@add_to_cart');
+
+
+
+
 
 
 
