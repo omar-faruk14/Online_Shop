@@ -11,6 +11,9 @@ use Session;
 use Illuminate\Support\Facades\Redirect;
 Session_start();
 
+
+/*Add To cart all product retrive from database*/
+
 class CartController extends Controller
 {
     public function add_to_cart(Request $request)
@@ -30,6 +33,9 @@ class CartController extends Controller
 
 
     }
+
+
+    /*Route Show add_to_product with database*/
 
     public function show_cart()
     {

@@ -3,8 +3,10 @@
 
 
 <!-- section Start -->
+
+
 <section id="cart_items">
-		<div class="container">
+		<div class="container col-sm-12">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Home</a></li>
@@ -13,7 +15,7 @@
 			</div>
 			<div class="table-responsive cart_info">
 
-
+<!-- all data retrive darryldecode laravel package -->
 				<?php 
                 
                 $content= Cart::getContent();
@@ -21,7 +23,7 @@
 				 ?>
 
 
-
+<!-- add_to_cart product table -->
 
 				<table class="table table-condensed">
 					<thead>
@@ -37,27 +39,29 @@
 					</thead>
 					<tbody>
 
-						@foreach($content as $v_content)
+						<!-- blade php for loop use -->
+
+						@foreach($content as $v_content) <!-- darryldecode retrive all data -->
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="{{URL::to($v_content->attributes->image)}}" alt=""></a>
+								<a href=""><img src="{{URL::to($v_content->attributes->image)}}" height="80px" weidth="80px"   alt=""></a>
 							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+							<td class="cart_name">
+								<p>{{$v_content->name}}</p>
+								<p>Product ID: {{$v_content->id}}</p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>{{$v_content->price}}</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
 									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+									<input class="cart_quantity_input" type="text" name="quantity" value="{{$v_content->quantity}}" autocomplete="off" size="2">
 									<a class="cart_quantity_down" href=""> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price">{{$v_content->getTotal}}</p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -69,10 +73,20 @@
 				</table>
 			</div>
 		</div>
-	</section> <!--/#cart_items-->
+	</section> 
+
+
+	<!-- Main Cart Item end -->
+
+
+
+
+
+
+	
 
 	<section id="do_action">
-		<div class="container">
+		<!-- <div class="container">
 			<div class="heading">
 				<h3>What would you like to do next?</h3>
 				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
@@ -131,14 +145,18 @@
 						<a class="btn btn-default update" href="">Get Quotes</a>
 						<a class="btn btn-default check_out" href="">Continue</a>
 					</div>
-				</div>
-				<div class="col-sm-6">
+				</div> -->
+
+
+
+				<!-- calculate total price and subprice -->
+				<div class="col-sm-8">
 					<div class="total_area">
 						<ul>
-							<li>Cart Sub Total <span>$59</span></li>
-							<li>Eco Tax <span>$2</span></li>
+							<li>Cart Sub Total <span>{{Cart::getSubTotal()}}</span></li>
+							<li>Eco Tax <span>0</span></li>
 							<li>Shipping Cost <span>Free</span></li>
-							<li>Total <span>$61</span></li>
+							<li>Total <span>{{Cart::getTotal()}}</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Update</a>
 							<a class="btn btn-default check_out" href="">Check Out</a>
