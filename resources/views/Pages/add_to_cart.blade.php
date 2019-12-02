@@ -15,12 +15,19 @@
 			</div>
 			<div class="table-responsive cart_info">
 
+
+
+
+
 <!-- all data retrive darryldecode laravel package -->
 				<?php 
                 
                 $content= Cart::getContent();
 
 				 ?>
+
+
+
 
 
 <!-- add_to_cart product table -->
@@ -55,9 +62,28 @@
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="{{$v_content->quantity}}" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+
+									
+
+
+
+
+
+       <form action="{{url('/update_plus')}}" method="post">
+			{{csrf_field()}}
+		<input class="cart_quantity_input" type="text" name="quantity" value="{{$v_content->quantity}}" autocomplete="off" size="2">
+		<input  type="hidden" name="id" value="{{$v_content->id}}" >
+		<button type="submit" class="cart_quantity_up"> + </button>
+		
+		</form>
+
+
+
+
+
+
+
+									
 								</div>
 							</td>
 							<td class="cart_total">

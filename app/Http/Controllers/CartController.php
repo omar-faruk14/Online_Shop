@@ -49,7 +49,7 @@ class CartController extends Controller
     }
 
 
-    /*Delete Add_to_cart product*/
+    /*Delete product from cart */
 
     public function delete_from_cart($id)
     {
@@ -58,6 +58,19 @@ class CartController extends Controller
     }
 
 
+
+
+/*update product cart*/
+
+    public function update_plus(Request $request)
+    {
+        $qty = $request->quantity;
+        $rowid = $request->id;
+        Cart::update($rowid, array(
+            'quantity' => 1, 
+          ));
+        return Redirect::to('/show_cart');
+    }
 
 
 }

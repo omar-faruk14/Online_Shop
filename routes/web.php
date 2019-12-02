@@ -61,6 +61,7 @@ Route::get('/delete_product/{product_id}','productController@delete_product');
 /*Cart Controller Route*/
 
 Route::post('/add_to_cart','CartController@add_to_cart');
+Route::post('/update_plus','CartController@update_plus');
 Route::get('/show_cart','CartController@show_cart');
 Route::get('/delete_from_cart/{id}','CartController@delete_from_cart');
 
