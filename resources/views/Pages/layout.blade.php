@@ -117,7 +117,18 @@
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+
+                                <!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
+
+
+                      <?php $customer_id=Session::get('customer_id');?>
+                      <?php if($customer_id !=NULL)  {?>
+                        <?php } else {?>
+                  <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                         <?php } ?>
+
+
+                              
                                 <li><a href="{{URL::to('/show_cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 
 <!-- customer id session gate and if customer id have show logout otherwise show login -->
