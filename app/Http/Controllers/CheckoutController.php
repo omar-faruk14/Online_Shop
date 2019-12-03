@@ -83,9 +83,8 @@ class CheckoutController extends Controller
 
      public function payment()
      {
-     	return view('pages.payment');
-
-     }
+       return view('pages.payment');
+   }
 
 
 
@@ -98,6 +97,8 @@ class CheckoutController extends Controller
 
 
 
+
+/*Customer Login Function Controller*/
 public function customer_login(Request $request)
     {
 
@@ -114,7 +115,7 @@ $result=DB::table('tbl_customer')
   if($result)
           {
 
-            /*If result success then session put admin name and admin_id*/
+            /*If result success then session put Customer name and Customer_id*/
               Session::put('customer_id',$result->customer_id);
               Session::put('customer_name',$result->customer_name);
               return Redirect::to('/checkout');
@@ -123,13 +124,10 @@ $result=DB::table('tbl_customer')
           else
           {
               Session::put('message','email or password invalid');
-              return Redirect::to('/login_check');//redirect to admin
+              return Redirect::to('/login_check');//redirect to Customer
           }
-
-     
-
-
     }
+
 
 
 

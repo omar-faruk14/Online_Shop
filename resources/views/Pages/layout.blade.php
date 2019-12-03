@@ -121,10 +121,26 @@
 <!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
 
 
-                      <?php $customer_id=Session::get('customer_id');?>
-                      <?php if($customer_id !=NULL)  {?>
+                      <?php $customer_id=Session::get('customer_id');
+                             $Shipping_id=Session::get('Shipping_id');?>
+
+
+
+
+
+
+
+ <!-- 3 condition set here,checkout execute this condition -->
+
+                      <?php if($customer_id !=NULL && $Shipping_id==NULL)  {?>
 
                         <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+
+
+                    <?php } if($customer_id !=NULL && $Shipping_id!=NULL) {?>
+                        <li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+
+
 
                         <?php } else {?>
                   <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
