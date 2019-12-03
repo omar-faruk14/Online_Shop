@@ -119,7 +119,15 @@
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li><a href="{{URL::to('/show_cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+
+<!-- customer id session gate and if customer id have show logout otherwise show login -->
+
+    <?php $customer_id=Session::get('customer_id');?>
+    <?php if($customer_id !=NULL)  {?>
+<li><a href="login.html"><i class="fa fa-lock"></i>logut</a></li>
+    <?php } else {?>
+     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+    <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -153,7 +161,7 @@
                                         <li><a href="product-details.html">Product Details</a></li> 
                                         <li><a href="checkout.html">Checkout</a></li> 
                                         <li><a href="{{URL::to('/show_cart')}}">Cart</a></li> 
-                                        <li><a href="login.html">Login</a></li> 
+                                        
                                     </ul>
                                 </li> 
                                 <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>

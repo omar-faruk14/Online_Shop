@@ -22,12 +22,12 @@
 							<div class="form-one">
 								<form>
 									
-									<input type="text" placeholder="Email">
-									<input type="text" placeholder="First Name ">
-									<input type="text" placeholder="Last Name ">
-									<input type="text" placeholder="Address">
-									<input type="text" placeholder="Mobile Number">
-									<input type="text" placeholder="City">
+									<input type="text" name="shipping_email" placeholder="Email">
+									<input type="text" name="shipping_first_name" placeholder="First Name ">
+									<input type="text" name="shipping_last_name" placeholder="Last Name ">
+									<input type="text"  name="shipping_address" placeholder="Address">
+									<input type="text"  name="shipping_mobile_number" placeholder="Mobile Number">
+									<input type="text" name="shipping_city" placeholder="City">
 									<input type="submit" class="btn btn-warning" value="Done">
 
 								</form>
