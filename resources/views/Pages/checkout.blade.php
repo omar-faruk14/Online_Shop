@@ -18,9 +18,14 @@
 				
 					<div class="col-sm-12 clearfix">
 						<div class="bill-to">
-							<p>Bill To</p>
+							<p>Shipping Details</p>
 							<div class="form-one">
-								<form>
+
+
+
+								<!-- main shipping information form -->
+								<form action="/save_shipping_Details" method="post">
+									{{csrf_field()}}
 									
 									<input type="text" name="shipping_email" placeholder="Email">
 									<input type="text" name="shipping_first_name" placeholder="First Name ">
@@ -39,12 +44,6 @@
 
 				
 				</div>
-			</div>
-			<div class="review-payment">
-				<h2>Review & Payment</h2>
-
-
-
 			</div>
 
 			

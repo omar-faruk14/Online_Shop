@@ -42,11 +42,32 @@ class CheckoutController extends Controller
 
 
 
-   
-
+   /*by this route checkout page*/
 
    public function checkout()
    {
    	return view('pages.checkout');
+   }
+
+
+
+
+
+
+   public function save_shipping_Details(Request $request)
+   {
+   	 $data=array();
+   	 $data['shipping_email']=$request->shipping_email;
+   	 $data['shipping_first_name']=$request->shipping_first_name;
+   	 $data['shipping_last_name']=$request->shipping_last_name;
+   	 $data['shipping_address']=$request->shipping_address;
+   	 $data['shipping_mobile_number']=$request->shipping_mobile_number;
+   	 $data['shipping_city']=$request->shipping_city;
+
+   	 echo "<pre>";
+   	 print_r($data);
+   	 echo "<pre>";
+
+
    }
 }
