@@ -8,16 +8,15 @@
 <section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 col-sm-offset-1">
-					<div class="login-form"><!--login form-->
+				<div class="col-sm-3 col-sm-offset-1">
+					<div class="login-form">
+
+						<!-- login form -->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-							</span>
+						<form action="#" method="">
+							<input type="text" placeholder="Email" name="customer_email" />
+							<input type="password" placeholder="Password" name="customer_password" />
+							
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 					</div><!--/login form-->
@@ -26,12 +25,16 @@
 					<h2 class="or">OR</h2>
 				</div>
 				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
+					<div class="signup-form">
+
+
+						<!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
+						<form action="#" method="">
+							<input type="text" placeholder="Name" name="customer_name" />
+							<input type="email" placeholder="Email Address" name="customer_email" />
+							<input type="password" placeholder="Password"/ name="customer_password">
+							<input type="text" placeholder="Mobile Number" name="customer_mobileNumber" />
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
@@ -40,7 +43,7 @@
 		</div>
 	</section><!--/form-->
 
-	
+
 
 
 @endsection
