@@ -41,6 +41,10 @@ class CheckoutController extends Controller
    }
 
 
+
+   
+
+
    public function checkout()
    {
    	return view('pages.checkout');
