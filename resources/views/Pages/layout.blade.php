@@ -138,9 +138,9 @@
 
     <?php $customer_id=Session::get('customer_id');?>
     <?php if($customer_id !=NULL)  {?>
-<li><a href="login.html"><i class="fa fa-lock"></i>logut</a></li>
+<li><a href="{{URL::to('/customer_logout')}}"><i class="fa fa-lock"></i>logut</a></li>
     <?php } else {?>
-     <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+     <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-lock"></i> Login</a></li>
     <?php } ?>
                             </ul>
                         </div>

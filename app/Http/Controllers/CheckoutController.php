@@ -33,11 +33,11 @@ class CheckoutController extends Controller
 
      $customer_id=DB::table('tbl_customer')
      ->insertGetId($data);
-     session::put('customer_id',$customer_id);
-      session::put('customer_name',$request->customer_name);
+     Session::put('customer_id',$customer_id);
+      Session::put('customer_name',$request->customer_name);
      
 
-     return Redirect('/checkout');
+     return Redirect::to('/checkout');
    }
 
 
@@ -54,6 +54,8 @@ class CheckoutController extends Controller
 
 
 
+/*Insert Shipping Information*/
+
    public function save_shipping_Details(Request $request)
    {
    	 $data=array();
@@ -64,10 +66,39 @@ class CheckoutController extends Controller
    	 $data['shipping_mobile_number']=$request->shipping_mobile_number;
    	 $data['shipping_city']=$request->shipping_city;
 
-   	 echo "<pre>";
-   	 print_r($data);
-   	 echo "<pre>";
+   	 $Shipping_id=DB::table('tbl_shipping')
+     ->insertGetId($data);
 
 
+
+     Session::put('Shipping_id',$Shipping_id);
+     Session::put('customer_name',$request->customer_name);
+     return Redirect::to('/payment');
    }
+
+
+
+
+/*through payment page*/
+
+     public function payment()
+     {
+     	return view('pages.payment');
+
+     }
+
+
+
+/*customer logut Page*/
+     public function customer_logout()
+     {
+     	Session::flush();  //flush all session
+    	return Redirect::to('/');
+     }
+
+
+
+
+
+
 }
