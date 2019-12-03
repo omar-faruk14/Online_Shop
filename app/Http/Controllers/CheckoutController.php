@@ -134,7 +134,14 @@ $result=DB::table('tbl_customer')
 
 {
   $payment_gateway=$request->payment_gateway;
+  $Shipping_id=Session::get('Shipping_id');
+  $customer_id=Session::get('customer_id');
   echo $payment_gateway;
+  echo $customer_id;
+
+  echo "<pre>";
+  print_r($Shipping_id);
+  echo "</pre>";
   
 }
 
