@@ -99,6 +99,29 @@ class CheckoutController extends Controller
 
 
 
+public function customer_login(Request $request)
+{
+
+
+
+	/*check admin email and password from database*/
+    	$customer_email=$request->customer_email;
+    	$customer_password=$request->customer_password;
+    	$result=DB::table('tbl_customer')  //access table 
+    	->where('customer_email',$customer_email)   //check email
+    	->where('customer_password',$customer_password)   //check password
+    	->first();
+    	
+          
+          echo "<pre>";
+          print_r($result);
+          echo "</pre>";
+
+
+}
+
+
+
 
 
 }

@@ -13,13 +13,24 @@
 
 						<!-- login form -->
 						<h2>Login to your account</h2>
-						<form action="#" method="">
+
+
+
+
+
+						<!-- User Login Form -->
+						<form action="{{url('/customer_login')}}" method="post">
+							{{csrf_field()}}
 							<input type="text" placeholder="Email" name="customer_email" />
 							<input type="password" placeholder="Password" name="customer_password" />
 							
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 					</div><!--/login form-->
+
+
+
+
 				</div>
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
@@ -34,7 +45,7 @@
 							{{csrf_field()}}
 							<input type="text" placeholder="Name" name="customer_name" />
 							<input type="email" placeholder="Email Address" name="customer_email" />
-							
+
 							<input type="password" placeholder="Password"/ name="customer_password">
 
 							<input type="text" placeholder="Mobile Number"/ name="Mobile_Number">
