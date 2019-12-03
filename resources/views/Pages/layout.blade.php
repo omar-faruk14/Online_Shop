@@ -118,11 +118,14 @@
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 
-                                <!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
+<!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
 
 
                       <?php $customer_id=Session::get('customer_id');?>
                       <?php if($customer_id !=NULL)  {?>
+
+                        <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+
                         <?php } else {?>
                   <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                          <?php } ?>
