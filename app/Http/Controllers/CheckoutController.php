@@ -20,6 +20,8 @@ class CheckoutController extends Controller
 
 
 
+
+/*user registration and  data from sign up form*/
    public function customer_registration(Request $request)
    {
      $data=array();
@@ -27,13 +29,20 @@ class CheckoutController extends Controller
      $data['customer_name']=$request->customer_name;
      $data['customer_email']=$request->customer_email;
      $data['customer_password']=$request->customer_password;
-     $data['customer_mobile_number']=$request->customer_mobile_number;
+     $data['customer_mobile_number']=$request->Mobile_Number;
 
      $customer_id=DB::table('tbl_customer')
      ->insertGetId($data);
-     session::put('customer_id',$cutomer_id);
-     session::put('customer_name'$customer_name);
+     session::put('customer_id',$customer_id);
+      session::put('customer_name',$request->customer_name);
+     
 
      return Redirect('/checkout');
+   }
+
+
+   public function checkout()
+   {
+   	return view('pages.checkout');
    }
 }

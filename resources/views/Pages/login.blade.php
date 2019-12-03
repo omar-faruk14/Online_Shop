@@ -34,8 +34,11 @@
 							{{csrf_field()}}
 							<input type="text" placeholder="Name" name="customer_name" />
 							<input type="email" placeholder="Email Address" name="customer_email" />
+							
 							<input type="password" placeholder="Password"/ name="customer_password">
-							<input type="text" placeholder="Mobile Number" name="customer_mobileNumber" />
+
+							<input type="text" placeholder="Mobile Number"/ name="Mobile_Number">
+						
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
