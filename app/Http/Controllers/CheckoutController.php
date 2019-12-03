@@ -130,6 +130,14 @@ $result=DB::table('tbl_customer')
 
 
 
+ public function order_place(Request $request)
+
+{
+  $payment_gateway=$request->payment_gateway;
+  echo $payment_gateway;
+  
+}
+
 
 
 }

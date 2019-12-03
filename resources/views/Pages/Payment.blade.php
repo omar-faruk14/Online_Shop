@@ -101,6 +101,7 @@
 
 <div>
 <form action="{{url('/order_place')}}" method="post">
+		{{csrf_field()}}
 	<input type="radio" name="payment_gateway" value="Handcash">Hand Cash<br>
 	<input type="radio" name="payment_gateway" value="Bkash">Bkash<br>
 	<input type="radio" name="payment_gateway" value="Rocket">Rocket<br>
