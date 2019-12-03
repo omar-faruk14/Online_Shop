@@ -98,28 +98,38 @@ class CheckoutController extends Controller
 
 
 
-
 public function customer_login(Request $request)
-{
+    {
+
+$customer_email=$request->customer_email;
+$customer_password=$request->customer_password;
 
 
+$result=DB::table('tbl_customer')
+->where('customer_email',$customer_email)
+->where('customer_password',$customer_password)
+->first();
+  
 
-	/*check admin email and password from database*/
-    	$customer_email=$request->customer_email;
-    	$customer_password=$request->customer_password;
-    	$result=DB::table('tbl_customer')  //access table 
-    	->where('customer_email',$customer_email)   //check email
-    	->where('customer_password',$customer_password)   //check password
-    	->first();
-    	
-          
-          echo "<pre>";
-          print_r($result);
-          echo "</pre>";
+  if($result)
+          {
+
+            /*If result success then session put admin name and admin_id*/
+              Session::put('customer_id',$result->customer_id);
+              Session::put('customer_name',$result->customer_name);
+              return Redirect::to('/checkout');
+          }
+
+          else
+          {
+              Session::put('message','email or password invalid');
+              return Redirect::to('/login_check');//redirect to admin
+          }
+
+     
 
 
-}
-
+    }
 
 
 

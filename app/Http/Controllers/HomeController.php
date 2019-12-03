@@ -117,4 +117,8 @@ $manufacture_base_product=DB::table('tbl_products')
         ->with('pages.product_details',$manage_details_product); //return view pages layout
         //return view('pages.product_details');
     }
+
+
+
+    
 }

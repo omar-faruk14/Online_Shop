@@ -14,6 +14,25 @@
 						<!-- login form -->
 						<h2>Login to your account</h2>
 
+						<!-- Alert login showing -->
+
+
+						<p class="alert-danger">
+
+
+					<?php 
+					$message=Session::get('message');
+
+					if($message)
+					{
+						echo $message;
+						Session::put('message',null);
+
+
+					}
+					 ?>
+					</p>
+
 
 
 
