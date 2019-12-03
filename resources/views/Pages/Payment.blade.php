@@ -102,9 +102,9 @@
 <div>
 <form action="{{url('/order_place')}}" method="post">
 		{{csrf_field()}}
-	<input type="radio" name="payment_gateway" value="Handcash">Hand Cash<br>
-	<input type="radio" name="payment_gateway" value="Bkash">Bkash<br>
-	<input type="radio" name="payment_gateway" value="Rocket">Rocket<br>
+	<input type="radio" name="payment_method" value="Handcash">Hand Cash<br>
+	<input type="radio" name="payment_method" value="Bkash">Bkash<br>
+	<input type="radio" name="payment_method" value="Rocket">Rocket<br>
 	<input type="submit" name="" value="Done">
 	
 </div>

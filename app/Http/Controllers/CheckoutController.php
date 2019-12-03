@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Cart;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
@@ -133,15 +134,68 @@ $result=DB::table('tbl_customer')
  public function order_place(Request $request)
 
 {
-  $payment_gateway=$request->payment_gateway;
-  $Shipping_id=Session::get('Shipping_id');
-  $customer_id=Session::get('customer_id');
-  echo $payment_gateway;
-  echo $customer_id;
 
-  echo "<pre>";
-  print_r($Shipping_id);
-  echo "</pre>";
+  /*Payment Table Data Insert*/
+  $payment_method=$request->payment_method;
+  $pdata=array();
+  $pdata['payment_method']=$payment_method;
+  $pdata['payment_status']='pending';
+  $payment_id=DB::table('tbl_payment')
+  ->insertGetId($pdata);
+
+  $content= Cart::getContent();
+
+
+  /*Order Table Data Insert*/
+
+     $odata=array();
+     $odata['customer_id']=Session::get('customer_id');
+     $odata['Shipping_id']=Session::get('Shipping_id');
+     $odata['payment_id']=$payment_id;
+
+     $odata['order_total']=Cart::getTotal();
+     $odata['order_status']='pending';
+     $order_id=DB::table('tbl_order')
+  ->insertGetId($odata);
+
+
+  $od_data=array();
+
+
+  /*Order Deatils Tabale Data Insert*/
+
+  foreach ( $content as $v_content) {
+    $od_data['order_id']=$order_id;
+    $od_data['product_id']=$v_content->id;
+    $od_data['product_name']=$v_content->name;
+    $od_data['product_price']=$v_content->price;
+    $od_data['product_sales_quantity']=$v_content->quantity;
+    DB::table('tbl_order_details')
+       ->insert($od_data);
+
+
+       if($payment_method=='Handcash')
+       {
+        echo "Successfully done by Handcash";
+       }
+
+       else if($payment_method=='Bkash')
+       {
+        echo "Please pay  your total amount 01517805450 and then sms inform me";
+       }
+       else($payment_method=='Rocket')
+       {
+        echo "Please pay  your total amount 01517805450 and then sms inform me";
+       }
+    
+  }
+   
+
+
+
+
+
+
   
 }
 
