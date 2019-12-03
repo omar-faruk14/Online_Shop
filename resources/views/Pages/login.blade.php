@@ -28,9 +28,10 @@
 					<div class="signup-form">
 
 
-						<!--sign up form-->
+						<!--new user sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#" method="">
+						<form action="{{url('/customer_registration')}}" method="post">
+							{{csrf_field()}}
 							<input type="text" placeholder="Name" name="customer_name" />
 							<input type="email" placeholder="Email Address" name="customer_email" />
 							<input type="password" placeholder="Password"/ name="customer_password">
