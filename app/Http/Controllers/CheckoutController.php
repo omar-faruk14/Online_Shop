@@ -8,6 +8,6 @@ class CheckoutController extends Controller
 {
    public function login_check()
    {
-   	echo "login Route Test";
+   	return view('pages.login');
    }
 }
