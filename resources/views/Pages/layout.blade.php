@@ -152,11 +152,11 @@
 
 <!-- customer id session gate and if customer id have show logout otherwise show login -->
 
-    <?php $customer_id=Session::get('customer_id');?>
-    <?php if($customer_id !=NULL)  {?>
-<li><a href="{{URL::to('/customer_logout')}}"><i class="fa fa-lock"></i>logut</a></li>
+    <?php $customer_id=Session::get('customer_id');?> <!-- Get Customer ID from the session-->
+    <?php if($customer_id !=NULL)  {?>     <!-- Check weather the cutomer ID in the session or not-->
+<li><a href="{{URL::to('/customer_logout')}}"><i class="fa fa-lock"></i>logut</a></li> <!-- If the customer want to log out then the session will be destroy-->
     <?php } else {?>
-     <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-lock"></i> Login</a></li>
+     <li><a href="{{URL::to('/login_check')}}"><i class="fa fa-lock"></i> Login</a></li> <!-- It will redirect the user to the login page -->
     <?php } ?>
                             </ul>
                         </div>
