@@ -43,6 +43,8 @@ class ManageOrderController extends Controller
     }
 
 
+/*manually admin can unactive order*/
+
      public function unactive_order($order_id)
     {
     	DB::table('tbl_order')
@@ -51,6 +53,9 @@ class ManageOrderController extends Controller
     	return Redirect('/manage_order');
 
     }
+
+
+    /*Admin Can delete order By this function */
 
     public function delete_order($order_id)
     {
@@ -62,6 +67,15 @@ class ManageOrderController extends Controller
 
 
 
+    }
+
+
+
+
+
+    public function view_order($order_id)
+    {
+    	echo $order_id;
     }
 
 }
