@@ -41,4 +41,15 @@ class ManageOrderController extends Controller
     	return Redirect('/manage_order');
 
     }
+
+
+     public function unactive_order($order_id)
+    {
+    	DB::table('tbl_order')
+    	->where('order_id',$order_id)
+    	->update(['order_status'=>'pending']);
+    	return Redirect('/manage_order');
+
+    }
+
 }
