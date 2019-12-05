@@ -52,4 +52,16 @@ class ManageOrderController extends Controller
 
     }
 
+    public function delete_order($order_id)
+    {
+    	DB::table('tbl_order') 
+    	->where('order_id',$order_id)
+    	->delete();
+    	Session::put('message','order Deleted Successfully !');
+    	return Redirect('/manage_order');
+
+
+
+    }
+
 }

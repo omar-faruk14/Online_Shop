@@ -102,8 +102,6 @@
                       <?php $customer_id=Session::get('customer_id');
                              $Shipping_id=Session::get('Shipping_id');?>
 
-                             <?php echo $customer_id;
-                                          echo $Shipping_id; ?>
 
 
 

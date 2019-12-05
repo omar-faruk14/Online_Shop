@@ -82,6 +82,11 @@
 
 									@endif
 
+
+									<a class="btn btn-info" href="{{URL::to('/edit_category/'.$v_category->Categories_id)}}">
+										<i class="halflings-icon white edit"></i>  
+									</a>
+
 									<a class="btn btn-danger" href="{{URL::to('/delete_order/'.$v_order->order_id)}}">
 										<i class="halflings-icon white trash"></i> 
 									</a>

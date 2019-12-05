@@ -38,7 +38,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Online Shop</span></a>
+				<a class="brand" href="{{URL::to('/')}}"><span>Online Shop</span></a>
 
 
 

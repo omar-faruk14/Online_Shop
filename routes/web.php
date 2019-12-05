@@ -85,6 +85,8 @@ Route::post('/order_place','checkoutController@order_place');
 Route::get('/manage_order','ManageOrderController@manage_order');
 Route::get('/active_order/{order_id}','ManageOrderController@active_order');
 Route::get('/unactive_order/{order_id}','ManageOrderController@unactive_order');
+Route::get('/delete_order/{order_id}','ManageOrderController@delete_order');
+
 
 
 
