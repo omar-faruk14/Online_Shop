@@ -35,6 +35,10 @@ class ManageOrderController extends Controller
     /*Manage Order Accept function*/
     public function active_order($order_id)
     {
-    	echo $order_id;
+    	DB::table('tbl_order')
+    	->where('order_id',$order_id)
+    	->update(['order_status'=>'Accept']);
+    	return Redirect('/manage_order');
+
     }
 }
