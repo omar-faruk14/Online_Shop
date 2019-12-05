@@ -183,9 +183,10 @@ $result=DB::table('tbl_customer')
        {
         echo "Please pay  your total amount 01517805450 and then sms inform me";
        }
-       else($payment_method=='Rocket')
+       
+       else
        {
-        echo "Please pay  your total amount 01517805450 and then sms inform me";
+        echo "Please Pay first by rocket 015178054508";
        }
     
   }

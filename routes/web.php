@@ -80,6 +80,14 @@ Route::post('/order_place','checkoutController@order_place');
 
 
 
+/*Manage Order Controller All web route*/
+
+Route::get('/manage_order','ManageOrderController@manage_order');
+
+
+
+
+
 
 
 

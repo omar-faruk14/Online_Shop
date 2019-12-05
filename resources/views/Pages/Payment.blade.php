@@ -46,28 +46,36 @@
 					</thead>
 					<tbody>
 
-						<!-- blade php for loop use -->
 
-						@foreach($content as $v_content) <!-- darryldecode retrive all data -->
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="{{URL::to($v_content->attributes->image)}}" height="80px" weidth="80px"   alt=""></a>
-							</td>
-							<td class="cart_name">
-								<p>{{$v_content->name}}</p>
-								<p>Product ID: {{$v_content->id}}</p>
-							</td>
-							<td class="cart_price">
-								<p>{{$v_content->price}}</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
+
+
+
+		<!-- blade php for loop use -->
+
+		@foreach($content as $v_content) <!-- darryldecode retrive all data -->
+		<tr>
+			<td class="cart_product">
+				<a href=""><img src="{{URL::to($v_content->attributes->image)}}" height="80px" weidth="80px"   alt=""></a>
+			</td>
+			<td class="cart_name">
+				<p>{{$v_content->name}}</p>
+				<p>Product ID: {{$v_content->id}}</p>
+			</td>
+			<td class="cart_price">
+				<p>{{$v_content->price}}</p>
+			</td>
+			<td class="cart_quantity">
+				<div class="cart_quantity_button">
 
 									
 
 
 
 
+
+
+
+<!-- Update 1 Quantity By this form -->
 
        <form action="{{url('/update_plus')}}" method="post">
 			{{csrf_field()}}
@@ -81,7 +89,7 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">{{$v_content->getPriceSum()}}</p>
+								<p class="cart_total_price">{{$v_content->getPriceSum()}}</p> <!-- Individual get price sum -->
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href="{{URL::to('/delete_from_cart/'.$v_content->id)}}"><i class="fa fa-times"></i></a>
@@ -98,6 +106,11 @@
 
 
 
+
+
+
+
+<!-- Payment Method -->
 
 <div>
 <form action="{{url('/order_place')}}" method="post">
