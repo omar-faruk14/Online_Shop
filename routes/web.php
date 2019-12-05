@@ -83,6 +83,7 @@ Route::post('/order_place','checkoutController@order_place');
 /*Manage Order Controller All web route*/
 
 Route::get('/manage_order','ManageOrderController@manage_order');
+Route::get('/active_order/{order_id}','ManageOrderController@active_order');
 
 
 

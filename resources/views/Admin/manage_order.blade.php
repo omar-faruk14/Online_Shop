@@ -44,7 +44,7 @@
 						  </thead> 
 
 
-						  <!-- For each category Display loop code -->
+						  <!-- For each order Display loop code -->
 
 						  @foreach($all_manage_order_info as $v_order)
 
@@ -54,21 +54,21 @@
 							<tr>
 								<td>{{$v_order->order_id}}</td>
 								<td class="center">{{$v_order->customer_name}}</td>
-								<td class="center">{{$v_order->order_status}}</td>
+								<td class="center">{{$v_order->order_total}}</td>
 								<td class="center">
 									@if($v_order->order_status=='Accept')
 									<span class="label label-success">Accept</span>
 
 									@else  
 									<span class="label label-danger">
-									Unactive</span>
+									Pending</span>
 
 									@endif
 								</td>
 								<td class="center">
 									
 
-									@if($v_order->order_status=='pending')
+									@if($v_order->order_status=='Accept')
 									<a class="btn btn-danger" href="{{URL::to('/unactive_order/'.$v_order->order_id)}}">
 										<i class="halflings-icon white thumbs-down"></i>  
 									</a>
@@ -82,10 +82,6 @@
 
 									@endif
 
-
-									<a class="btn btn-info" href="{{URL::to('/edit_order/'.$v_order->order_id)}}">
-										<i class="halflings-icon white edit"></i>  
-									</a>
 									<a class="btn btn-danger" href="{{URL::to('/delete_order/'.$v_order->order_id)}}">
 										<i class="halflings-icon white trash"></i> 
 									</a>

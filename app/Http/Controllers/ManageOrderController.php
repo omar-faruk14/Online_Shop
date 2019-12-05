@@ -22,11 +22,19 @@ class ManageOrderController extends Controller
     ->select('tbl_order.*','tbl_customer.customer_name')
     ->get();
         
-        $manage_product=view ('admin.manage_order')
+        $manage_order=view ('admin.manage_order')
         ->with('all_manage_order_info',$all_manage_order_info);
 
         return view('admin.admin_layout')
-        ->with('admin.manage_order',$manage_product);
+        ->with('admin.manage_order',$manage_order);
 
+    }
+
+
+
+    /*Manage Order Accept function*/
+    public function active_order($order_id)
+    {
+    	echo $order_id;
     }
 }
