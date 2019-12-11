@@ -117,6 +117,24 @@ $manufacture_base_product=DB::table('tbl_products')
         ->with('pages.product_details',$manage_details_product); //return view pages layout
         //return view('pages.product_details');
     }
+    public function blog()
+    {
+   	$all_published_product=DB::table('tbl_products')
+    ->join('tbl_category','tbl_products.categories_id','=','tbl_category.categories_id')
+    ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')     //join category and manufacture table
+
+    ->select('tbl_products.*','tbl_category.categories_name','tbl_manufacture.manufacture_name')
+    ->where('tbl_products.product_status',1)
+    ->limit(6)
+    ->get();
+
+      $manage_published_product=view ('pages.blog')
+        ->with('all_published_product',$all_published_product);    //view product information home_content showing
+        
+        return view('pages.bloglayout')
+        ->with('pages.blog',$manage_published_product); //return view pages layout
+    	//return view('pages.home_content');
+    }
 
 
 

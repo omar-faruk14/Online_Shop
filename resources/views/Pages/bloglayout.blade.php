@@ -195,7 +195,7 @@
 
 
 
-                       @yield('slider') ; 
+                  
 
 
 
@@ -210,92 +210,21 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="left-sidebar">
-                        <h2>Category</h2>
-                        <div class="panel-group category-products" id="accordian">
+                <div class="col-sm-3" style="border:2px solid #f1f1f1;padding:5px;">
+                    <div class="left-sidebar" >
+                        <h2>Rules And Regulation</h2>
+                       <p>This is the blog of our site. Here people can write about our product and can review our products.But the user can't write any irelavant tropics here. Thanks for being here.</p>
 
 
-
-            <!-- php laravel code for published Categories Home Page -->
-
-            <?php
-
-            $all_published_Categories=DB::table('tbl_category')
-            ->where('Publication_status',1)
-            ->get();
-
-            foreach($all_published_Categories as $v_category)
-
-            {
-
-            ?>
-
-
-            <!-- Product Categories List -->
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title"><a href="{{URL::to('/show_product_category/'.$v_category->Categories_id)}}">{{$v_category->Categories_name}}</a></h4>
-                </div>
-            </div>
-
-        <?php } ?>
-        </div><!--/category-products-->
-
-
-
-
-
-
-
-
-
-
-
+                       
                     
-                        <div class="brands_products"><!--brands_products-->
-                            <h2>Brands</h2>
-                            <div class="brands-name">
+                    </div>
+                    <div class="left-sidebar" >
+                        <h2>Advertisement</h2>
+                      <div style="background:green;height:200px;">
+                      </div>
 
-
-                           
-           <!-- Laravel Brand Display Code retrive manufacture from Database -->
-
-
-       <?php
-
-        $all_published_manufacture=DB::table('tbl_manufacture')
-        ->where('Publication_status',1)
-        ->get();
-
-        foreach($all_published_manufacture as $v_manufacture)//loop from database
-
-        {
-
-        ?>
-
-
-<!-- every loop made each manufacture item -->
- 
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="{{URL::to('/show_product_manufacture/'.$v_manufacture->manufacture_id)}}"> <span class="pull-right">(50)</span>{{$v_manufacture->manufacture_name}}</a></li>
-                
-            </ul>
-               <?php } ?>
-        </div>
-    </div> <!--/brands_products-->
-
-
-
-
-
-                        
-                        
-                        
-                        <div class="shipping text-center"><!--shipping-->
-                            <img src="images/home/shipping.jpg" alt="" />
-                        </div><!--/shipping-->
+                       
                     
                     </div>
                 </div>

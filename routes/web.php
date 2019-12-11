@@ -88,7 +88,9 @@ Route::get('/unactive_order/{order_id}','ManageOrderController@unactive_order');
 Route::get('/delete_order/{order_id}','ManageOrderController@delete_order');
 Route::get('/view_order/{order_id}','ManageOrderController@view_order');
 
+//Menu routes files
 
+Route::get('/blog','HomeController@blog');
 
 
 
