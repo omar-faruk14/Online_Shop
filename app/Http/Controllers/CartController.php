@@ -75,7 +75,7 @@ class CartController extends Controller
 
     public function payment_check()
     {
-        return view('Payment_method.rocket');
+        return view('Payment_method.bkash');
     }
 
 
