@@ -123,7 +123,10 @@
 							<li>Shipping Cost <span>Free</span></li>
 							<li>Total <span>{{Cart::getTotal()}}</span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
+							<!-- <a class="btn btn-default update" href="">Update</a> -->
+
+
+							
 							<!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
 
 

@@ -27,14 +27,14 @@ foreach($manufacture_base_product as $v_product) {?>
                             <div class="overlay-content">
                                 <h2>{{$v_product->product_price}}</h2>
                                 <p>{{$v_product->product_name}}</p>
-                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                <a href="{{URL::to('/view_product/'.$v_product->product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                             </div>
                         </div>
                 </div>
                 <div class="choose">
                     <ul class="nav nav-pills nav-justified">
-                        <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                        <li><a href="#"><i class="fa fa-plus-square"></i>View Product</a></li>
+                        <li><i class="fa fa-plus-square"></i>{{$v_product->manufacture_name}}</li>
+                        <li><a href="{{URL::to('/view_product/'.$v_product->product_id)}}"><i class="fa fa-plus-square"></i>View Product</a></li>
                     </ul>
                 </div>
             </div>
