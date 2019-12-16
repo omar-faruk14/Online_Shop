@@ -64,7 +64,7 @@ Route::post('/add_to_cart','CartController@add_to_cart');
 Route::post('/update_plus','CartController@update_plus');
 Route::get('/show_cart','CartController@show_cart');
 Route::get('/delete_from_cart/{id}','CartController@delete_from_cart');
-Route::get('/payment_check','CartController@payment_check');
+
 
 
 

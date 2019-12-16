@@ -7,7 +7,7 @@
 
 <li>Go to bKash Menu by dialing *247#</li>
 <li>Choose 'Payment' option by pressing '3'</li>
-<li>Enter our Merchant wallet number : 01730791523</li>
+<li>Enter our Merchant wallet number : 01733858342</li>
 <li>Enter BDT. amount you have to pay : {{Cart::getTotal()}}</li>
 <li>Enter a reference against your payment : <?php echo $customer_id; ?></li>
 <li>Enter the counter number : 1</li>

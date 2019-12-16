@@ -94,7 +94,7 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i>Account</a></li>
                                
 
 <!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->

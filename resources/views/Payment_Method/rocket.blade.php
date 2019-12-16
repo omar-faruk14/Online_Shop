@@ -6,7 +6,7 @@
 
 
 
-
+<div class="btn btn-primary">Follow This Method for Rocket Payment</div>
 
 <div dir="ltr" style="text-align: left;" trbidi="on">
 <div class="row" style="background-color: white; box-sizing: border-box; color: #333333; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; margin-left: -15px; margin-right: -15px;">
