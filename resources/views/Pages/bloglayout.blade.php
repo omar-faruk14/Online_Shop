@@ -270,8 +270,8 @@
                                                 <i class="fa fa-play-circle-o"></i>
                                             </div>
                                         </a>
-                                        <p>Circle of Hands</p>
-                                        <h2>24 DEC 2014</h2>
+                                        <p>Products Name</p>
+                                        <h2>24 DEC 2019</h2>
                                     </div>
                                 </div>
                         
