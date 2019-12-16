@@ -252,7 +252,7 @@
                     <div class="col-sm-2">
                         <div class="companyinfo">
                             <h2><span>Online</span>-Shop</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+                            <p>Here is the solution of all your need</p>
                         </div>
                     </div>
                     <div class="col-sm-7">
