@@ -10,7 +10,7 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
+				  <li class="active">Profile</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
