@@ -35,7 +35,7 @@ class CheckoutController extends Controller
      $customer_id=DB::table('tbl_customer')
      ->insertGetId($data);
      Session::put('customer_id',$customer_id);
-      Session::put('customer_name',$request->customer_name);
+    Session::put('customer_name',$request->customer_name);
      
 
      return Redirect::to('/checkout');
@@ -176,17 +176,17 @@ $result=DB::table('tbl_customer')
 
        if($payment_method=='Handcash')
        {
-        echo "Successfully done by Handcash";
+        return view('payment_method.handcash');
        }
 
        else if($payment_method=='Bkash')
        {
-        echo "Please pay  your total amount 01517805450 and then sms inform me";
+        return view('payment_method.bkash');
        }
        
        else
        {
-        echo "Please Pay first by rocket 015178054508";
+        return view('payment_method.rocket');
        }
     
   }

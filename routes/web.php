@@ -68,6 +68,7 @@ Route::get('/delete_from_cart/{id}','CartController@delete_from_cart');
 
 
 
+
 /*checkout Controller*/
 Route::get('/login_check','CheckoutController@login_check');
 Route::post('/customer_registration','CheckoutController@customer_registration');
