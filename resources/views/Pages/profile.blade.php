@@ -13,45 +13,7 @@
 				  <li class="active">Profile</li>
 				</ol>
 			</div>
-			<div class="table-responsive cart_info">
-
-
-
-
-
-
-				
-
-
-
-
-
-
-
-		
-					
-
-
-
-
-		
-
-
-		
-			
-									
-
-
-
-
-
-
-
-<!-- Update 1 Quantity By this form -->
-
-      
-				
-			</div>
+			<h2>This is your profile</h2>
 		</div>
 	</section> 
 
@@ -62,17 +24,7 @@
 
 
 
-<!-- Payment Method -->
 
-<div>
-<form action="{{url('/order_place')}}" method="post">
-		{{csrf_field()}}
-	<input type="radio" name="payment_method" value="Handcash">Hand Cash<br>
-	<input type="radio" name="payment_method" value="Bkash">Bkash<br>
-	<input type="radio" name="payment_method" value="Rocket">Rocket<br>
-	<input type="submit" name="" value="Done">
-	
-</div>
 
 
 </form>

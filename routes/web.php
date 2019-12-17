@@ -7,7 +7,7 @@
 //Frontend Online_shop...............
 Route::get('/','HomeController@index');
 
-
+Route::get('/profile','HomeController@profile');
 /*show specific categorywise View Route*/
 Route::get('/show_product_category/{Categories_id}','HomeController@show_product_category');
 Route::get('/show_product_manufacture/{Categories_id}','HomeController@show_product_manufacture');
