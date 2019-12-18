@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class AppTest extends TestCase
+class RouteTest extends TestCase
 {
     /**
      * A basic unit test example.
@@ -15,6 +15,7 @@ class AppTest extends TestCase
      */
     public function testExample()
     {
-        $this->assertTrue(true);
+        $response =$this->get("/profile");
+        $response->assertStatus(500);
     }
 }
