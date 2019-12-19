@@ -86,11 +86,7 @@
 							</div>
 							<div class="clearfix"></div>
 					</form>
-					<hr>
-					<h3>Forgot Password?</h3>
-					<p>
-						No problem, <a href="#">click here</a> to get a new password.
-					</p>	
+						
 				</div><!--/span-->
 			</div>
 			
@@ -112,9 +108,9 @@
 	
 		<script src="{{asset('backend/js/jquery.cookie.js')}}"></script>
 	
-		<script src='{{asset('backend/js/fullcalendar.min.js')}}'></script>
+		<script src="{{asset('backend/js/fullcalendar.min.js')}}"></script>
 	
-		<script src='{{asset('backend/js/jquery.dataTables.min.js')}}'></script>
+		<script src="{{asset('backend/js/jquery.dataTables.min.js')}}"></script>
 
 		<script src="{{asset('backend/js/excanvas.')}}js"></script>
 	
