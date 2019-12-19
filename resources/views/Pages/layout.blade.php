@@ -91,21 +91,32 @@
                         </div>
                         
                     </div>
-                    <div class="col-sm-8">
-                        <div class="shop-menu pull-right">
-                            <ul class="nav navbar-nav">
-                                <li><a href="profile"><i class="fa fa-user"></i>Account</a></li>
-                               
-
-<!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
 
 
-                      <?php $customer_id=Session::get('customer_id');
+
+                    <?php $customer_id=Session::get('customer_id');
                              $Shipping_id=Session::get('Shipping_id');?>
 
 
+                               
+
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <?php if($customer_id )   {?>
+                                <li><a href="{{URL::to('/profile/'.$customer_id)}}"><i class="fa fa-user"></i>Account</a></li>
+
+                            <?php } ?>
 
 
+
+
+
+                      
+
+
+
+<!-- set checkout by session customer_id ,if find customer id then not showing checkout otherwise showing checkout -->
 
 
 
@@ -130,6 +141,17 @@
 
                               
                                 <li><a href="{{URL::to('/show_cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- customer id session gate and if customer id have show logout otherwise show login -->
 
@@ -175,11 +197,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div><!--/header-bottom-->

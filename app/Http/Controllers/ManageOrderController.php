@@ -87,7 +87,6 @@ class ManageOrderController extends Controller
     ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_id')
     ->join('tbl_shipping','tbl_order.Shipping_id','=','tbl_shipping.Shipping_id') 
     ->select('tbl_shipping.*','tbl_order.*','tbl_customer.*','tbl_order_details.*') 
-  
 
     ->get();
         

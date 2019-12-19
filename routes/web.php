@@ -93,6 +93,16 @@ Route::get('/view_order/{order_id}','ManageOrderController@view_order');
 
 Route::get('/blog','HomeController@blog');
 
+Route::get('/profile/{customer_id}','user@profile');
+
+
+
+
+
+
+
+
+
 
 
 

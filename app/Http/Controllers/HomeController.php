@@ -135,11 +135,10 @@ $manufacture_base_product=DB::table('tbl_products')
       $manage_published_product=view ('pages.blog')
         ->with('all_published_product',$all_published_product);    //view product information home_content showing
         
-        return view('pages.bloglayout')
+        return view('pages.layout')
         ->with('pages.blog',$manage_published_product); //return view pages layout
     	//return view('pages.home_content');
     }
-
 
 
     

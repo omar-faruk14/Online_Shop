@@ -1,4 +1,4 @@
-@extends('pages.bloglayout')
+@extends('pages.layout')
 @section('content')
 
 
@@ -24,9 +24,8 @@ foreach($all_published_product as $v_product) {?>
                             <img src="{{URL::to($v_product->product_image)}}" style="height: 207px; width: 183px" alt="" />
                             
                         <div class="col-lg-9" style="float:right; margin-bottom:5px; padding:5px;">
-                            <p>This is the Title</p>
-                                Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text.
-                                Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. Here is the products text. 
+                            <p>{{($v_product->product_name)}}</p>
+                                {{($v_product->product_long_description)}}
                         </div>
                         
                 </div>
