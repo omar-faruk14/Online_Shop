@@ -94,27 +94,29 @@
 
 
 
-
                     <?php $customer_id=Session::get('customer_id');
                              $Shipping_id=Session::get('Shipping_id');?>
 
 
+                               
 
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="{{URL::to('/Account_Product/'.$customer_id)}}"><i class="fa fa-user"></i>Account</a></li>
-                               
+                                <?php if($customer_id )   {?>
+                                <li><a href="{{URL::to('/profile/'.$customer_id)}}"><i class="fa fa-user"></i>Account</a></li>
 
-<!-- set checkout by session customer_id if find customer id then not showing checkout otherwise showing checkout -->
-
-
-                      <?php $customer_id=Session::get('customer_id');
-                             $Shipping_id=Session::get('Shipping_id');?>
+                            <?php } ?>
 
 
 
 
+
+                      
+
+
+
+<!-- set checkout by session customer_id ,if find customer id then not showing checkout otherwise showing checkout -->
 
 
 

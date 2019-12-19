@@ -141,6 +141,5 @@ $manufacture_base_product=DB::table('tbl_products')
     }
 
 
-
     
 }
