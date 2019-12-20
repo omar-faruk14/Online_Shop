@@ -4,6 +4,17 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Socialite;
+use Auth;
+use App\User;
+use DB;
+use Cart;
+use App\Http\Requests;
+use App\Image;
+
+use Session;
+use Illuminate\Support\Facades\Redirect;
+Session_start();
 
 class LoginController extends Controller
 {
@@ -36,4 +47,49 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+
+
+
+
+
+
+
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+
+
+
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('google')->stateless()->user();
+
+       $data=array();
+     
+     $data['customer_name']=$user->getName();
+     $data['customer_email']=$user->getEmail();
+     $data['customer_password']=$user->getId();
+     
+
+     $customer_id=DB::table('tbl_customer')
+     ->insertGetId($data);
+     Session::put('customer_id',$customer_id);
+    Session::put('customer_name',$user->getName());
+     
+
+     return Redirect::to('/google_login');
+    }
+
+
+
+
+
+
+
+
 }

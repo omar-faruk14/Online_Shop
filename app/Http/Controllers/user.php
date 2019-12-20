@@ -25,4 +25,10 @@ class user extends Controller
         //return view('pages.profile');
 }
 
+
+public function google_login()
+{
+	return view('pages.google_login');
+}
+
 }

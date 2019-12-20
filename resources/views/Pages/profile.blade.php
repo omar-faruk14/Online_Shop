@@ -32,6 +32,10 @@
                 <i class="glyphicon glyphicon-envelope"></i>{{$user_view_details->customer_email}}
                 <br />
                 <i class="glyphicon glyphicon-globe"></i>{{$user_view_details->customer_mobile_number}}
+                <br />
+                            <i class="glyphicon glyphicon-gift"></i>Customer ID: {{$user_view_details->customer_id}}</p>
+
+
                 </p>
             <!-- Split button -->
             

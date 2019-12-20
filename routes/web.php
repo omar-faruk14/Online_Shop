@@ -97,6 +97,14 @@ Route::get('/profile/{customer_id}','user@profile');
 
 
 
+/*google api*/
+
+Route::get('auth/google', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/google/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/google_login','user@google_login');
+
+
+
 
 
 
