@@ -1,11 +1,11 @@
 @extends('pages.layout')
 @section('content')
-
+<!-- database section-->
 <?php $customer_id=Session::get('customer_id');?>
 <?php $content= Cart::getContent(); ?>
 
 
-
+<!-- button of rocket payment-->
 <div class="btn btn-primary">Follow This Method for Rocket Payment</div>
 
 <div dir="ltr" style="text-align: left;" trbidi="on">
