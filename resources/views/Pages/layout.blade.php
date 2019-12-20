@@ -339,31 +339,31 @@
         <div >
             <div class="container">
                 <div class="row" >
-                    <div class="col-sm-4">
+                    <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                <ul >
-                   <li><a href="#">register</a><li>
-                    <li><a href="#">register</a><li>
-                        <li><a href="#">register</a><li>
-                            <li><a href="#">register</a><li>
-                   
+                   <li style="margin:5px;"><a href="/login_check">Login</a><li>
+                  <li style="margin:5px;"><a href="/login_check">Not Register?Register</a><li>
+                  <li style="margin:5px;"><a href="/show_cart">View Cart</a><li>
+                 <li style="margin:5px;"><a href="/blog">Visit Blog</a><li>
+                
                 </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                         <ul >
-                            <li><a href="#">register</a><li>
-                             <li><a href="#">register</a><li>
-                                 <li><a href="#">register</a><li>
-                                     <li><a href="#">register</a><li>
-                            
+                            <li style="margin:5px;"><a href="http://www.educationboard.gov.bd/" target="_blank">Education Board</a><li>
+                           <li style="margin:5px;"><a href="http://www.nctb.gov.bd/" target="_blank">NCTB Bangladesh</a><li>
+                           <li style="margin:5px;"><a href="http://www.northsouth.edu" target="_blank">North University</a><li>
+                          <li style="margin:5px;"><a href="http://tutorbd.xyz" target="_blank">TutorBd</a><li>
+                         
                          </ul>
                              </div>
-                <div class="col-lg-4">
+                             <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                                 <ul >
-                                    <li><a href="#">register</a><li>
-                                     <li><a href="#">register</a><li>
-                                         <li><a href="#">register</a><li>
-                                             <li><a href="#">register</a><li>
-                                    
+                                    <li style="margin:5px;"><a href="#">Contact with us</a><li>
+                                   <li style="margin:5px;">Plot : 15, Block : B<li>
+                                   <li style="margin:5px;">Road : NSU Road<li>
+                                  <li style="margin:5px;"><a href="#">Bashundara R/A</a><li>
+                                 
                                  </ul>
                                      </div>
               
