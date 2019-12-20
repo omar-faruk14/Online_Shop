@@ -343,8 +343,9 @@
             <div class="container">
                 <div class="row">
                     <p class="pull-left">Copyright © Online Shop</p>
-                    <p id="txt"></p>
-<h6>All right received.</h6>
+                    <div style="text-align:center;">
+                    <p style="color:#FE980F;font-size:18px;" id="txt"></p>
+                    </div>
                     <p class="pull-right">Designed by <span><a target="_blank" href="http://www.youtube.com/omartech24">Omar_Tech</a></span></p>
                 </div>
             </div>
