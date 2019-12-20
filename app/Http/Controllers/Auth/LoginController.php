@@ -55,7 +55,7 @@ class LoginController extends Controller
 
 
 
-
+/*google redirect*/
 
     public function redirectToProvider()
     {
@@ -63,13 +63,13 @@ class LoginController extends Controller
     }
 
 
-
+/*google registrition user all information store database by this function*/
 
     public function handleProviderCallback()
     {
         $user = Socialite::driver('google')->stateless()->user();
 
-       $data=array();
+       $data=array(); //take array for store information
      
      $data['customer_name']=$user->getName();
      $data['customer_email']=$user->getEmail();
@@ -80,6 +80,8 @@ class LoginController extends Controller
      ->insertGetId($data);
      Session::put('customer_id',$customer_id);
     Session::put('customer_name',$user->getName());
+    Session::put('customer_password',$user->getId());
+    Session::put('customer_email',$user->getEmail());
      
 
      return Redirect::to('/google_login');

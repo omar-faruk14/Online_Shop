@@ -28,6 +28,10 @@ class user extends Controller
 
 public function google_login()
 {
+
+ 
+
+
 	return view('pages.google_login');
 }
 
