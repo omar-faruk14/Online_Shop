@@ -339,31 +339,31 @@
         <div >
             <div class="container">
                 <div class="row" >
-                    <div class="col-sm-4">
+                    <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                <ul >
-                   <li><a href="#">register</a><li>
-                    <li><a href="#">register</a><li>
-                        <li><a href="#">register</a><li>
-                            <li><a href="#">register</a><li>
-                   
+                   <li style="margin:5px;"><a href="#">Login</a><li>
+                  <li style="margin:5px;"><a href="#">Not Register?Register</a><li>
+                  <li style="margin:5px;"><a href="#">View Cart</a><li>
+                 <li style="margin:5px;"><a href="#">Visit Blog</a><li>
+                
                 </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                         <ul >
-                            <li><a href="#">register</a><li>
-                             <li><a href="#">register</a><li>
-                                 <li><a href="#">register</a><li>
-                                     <li><a href="#">register</a><li>
-                            
+                            <li style="margin:5px;"><a href="#">Login</a><li>
+                           <li><a href="#">Register</a><li>
+                           <li><a href="#">Cart</a><li>
+                          <li><a href="#">Blog</a><li>
+                         
                          </ul>
                              </div>
-                <div class="col-lg-4">
+                             <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                                 <ul >
-                                    <li><a href="#">register</a><li>
-                                     <li><a href="#">register</a><li>
-                                         <li><a href="#">register</a><li>
-                                             <li><a href="#">register</a><li>
-                                    
+                                    <li style="margin:5px;"><a href="#">Login</a><li>
+                                   <li><a href="#">Register</a><li>
+                                   <li><a href="#">Cart</a><li>
+                                  <li><a href="#">Blog</a><li>
+                                 
                                  </ul>
                                      </div>
               
