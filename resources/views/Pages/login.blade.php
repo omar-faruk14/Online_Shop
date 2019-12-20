@@ -72,6 +72,7 @@
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
+					<div class ="btn btn-default"><a href="{{url('auth/google')}}">Register With Google</a></div>
 				</div>
 			</div>
 		</div>
