@@ -39,7 +39,7 @@
 
 
 <!-- Header HTML Code  Email and Phone Number-->
-<body>
+<body onload="startTime()">
     <header id="header">
 
         <div class="header_top">
@@ -343,6 +343,8 @@
             <div class="container">
                 <div class="row">
                     <p class="pull-left">Copyright © Online Shop</p>
+                    <p id="txt"></p>
+<h6>All right received.</h6>
                     <p class="pull-right">Designed by <span><a target="_blank" href="http://www.youtube.com/omartech24">Omar_Tech</a></span></p>
                 </div>
             </div>
@@ -362,5 +364,22 @@
     <script src="{{asset('frontend/js/price-range.js')}}"></script>
     <script src="{{asset('frontend/js/jquery.prettyPhoto.js')}}"></script>
     <script src="{{asset('frontend/js/main.js')}}"></script>
+    <script>
+        function startTime() {
+          var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML ="Current Time: "+
+          h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
 </body>
 </html>
