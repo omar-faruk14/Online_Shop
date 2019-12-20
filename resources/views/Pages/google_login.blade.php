@@ -2,14 +2,14 @@
 @section('content')
 
 
-<!-- by this code get session information -->
+<!--- By this code get session information --->
 <?php 
 $customer_id=Session::get('customer_id');
 $customer_name=Session::get('customer_name');
 $customer_password=Session::get('customer_password');
 $customer_email=Session::get('customer_email');
 					?>
-<!-- google login user information showing -->
+<!-- Google login user information showing -->
 
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active">
