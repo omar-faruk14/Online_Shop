@@ -9,7 +9,7 @@
 
 
 
-<!-- Categories Base Product show -->
+<!-- Cate gories Base Product Show -->
 <?php
 
 
