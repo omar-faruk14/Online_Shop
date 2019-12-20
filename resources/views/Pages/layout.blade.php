@@ -348,7 +348,7 @@
                     <p style="color:#FE980F;font-size:18px;" id="txt"></p>
                     <p style="font-size:20px;">All rights received</p>
                     </div>
-                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.youtube.com/omartech24">Omar_Tech</a></span></p>
+                  
                 </div>
             </div>
         </div>
