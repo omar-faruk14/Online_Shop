@@ -1,7 +1,8 @@
 @extends('pages.layout')
 @section('content')
+ <!-- Bkash Api -->
 <div class="bg-primary"><h2> Please use following steps to pay now:</h2> </div>
-                                                                                                                                            
+                                                                                                                                         
 <?php $customer_id=Session::get('customer_id');?>
 <?php $content= Cart::getContent(); ?>
 
