@@ -342,8 +342,9 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <p class="pull-left">Copyright © Online Shop</p>
+                   
                     <div style="text-align:center;">
+                        <p>&copy Online Shop</p>
                     <p style="color:#FE980F;font-size:18px;" id="txt"></p>
                     </div>
                     <p class="pull-right">Designed by <span><a target="_blank" href="http://www.youtube.com/omartech24">Omar_Tech</a></span></p>
