@@ -19,7 +19,7 @@
 
 
 
-<!-- all data retrive darryldecode laravel package -->
+<!-- all retrive darryldecode laravel package -->
 				<?php 
                 
                 $content= Cart::getContent();
@@ -64,7 +64,7 @@
 			<td class="cart_price">
 				<p>{{$v_content->price}}</p>
 			</td>
-			<td class="cart_quantity">
+			<td class="cart_quantity"> <!-- cart -->
 				<div class="cart_quantity_button">
 
 									
@@ -77,7 +77,7 @@
 
 <!-- Update 1 Quantity By this form -->
 
-       <form action="{{url('/update_plus')}}" method="post">
+       <form action="{{url('/update_plus')}}" method="post"><!-- cart quantity-->
 			{{csrf_field()}}
 		<input class="cart_quantity_input" type="text" name="quantity" value="{{$v_content->quantity}}" autocomplete="off" size="2">
 		<input  type="hidden" name="id" value="{{$v_content->id}}" >
@@ -113,7 +113,7 @@
 <!-- Payment Method -->
 
 <div>
-<form action="{{url('/order_place')}}" method="post">
+<form action="{{url('/order_place')}}" method="post"> <!-- payment Bkash,cash,rocket --> 
 		{{csrf_field()}}
 	<input type="radio" name="payment_method" value="Handcash">Hand Cash<br>
 	<input type="radio" name="payment_method" value="Bkash">Bkash<br>
