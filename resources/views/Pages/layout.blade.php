@@ -336,9 +336,39 @@
 
     <!-- Footer List -->
     <footer id="footer"><!--Footer-->
-        <div class="py-4">
-               
-            
+        <div >
+            <div class="container">
+                <div class="row" >
+                    <div class="col-sm-4">
+               <ul >
+                   <li><a href="#">register</a><li>
+                    <li><a href="#">register</a><li>
+                        <li><a href="#">register</a><li>
+                            <li><a href="#">register</a><li>
+                   
+                </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul >
+                            <li><a href="#">register</a><li>
+                             <li><a href="#">register</a><li>
+                                 <li><a href="#">register</a><li>
+                                     <li><a href="#">register</a><li>
+                            
+                         </ul>
+                             </div>
+                <div class="col-lg-4">
+                                <ul >
+                                    <li><a href="#">register</a><li>
+                                     <li><a href="#">register</a><li>
+                                         <li><a href="#">register</a><li>
+                                             <li><a href="#">register</a><li>
+                                    
+                                 </ul>
+                                     </div>
+              
+                </div>
+            </div>
         </div>
         <div class="footer-top">
             
