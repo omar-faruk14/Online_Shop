@@ -64,8 +64,8 @@
                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="www.facebook.com/omarfaruk24"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="wwww.twitter.com/shikderomar"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="//www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="//www.twitter.com"><i class="fa fa-twitter"></i></a></li>
                               
                             </ul>
                         </div>
