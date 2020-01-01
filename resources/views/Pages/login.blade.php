@@ -72,7 +72,7 @@
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
-					<div class ="btn btn-default"><a href="{{url('auth/google')}}">Register With Google</a></div>
+					<div class ="btn btn-primary"><a href="{{url('auth/google')}}"> <font color="white">Register With Google</font></a></div>
 				</div>
 			</div>
 		</div>

@@ -95,7 +95,8 @@
 
 
                     <?php $customer_id=Session::get('customer_id');
-                             $Shipping_id=Session::get('Shipping_id');?>
+                             $Shipping_id=Session::get('Shipping_id');
+                             $customer_name=Session::get('customer_name')?>
 
 
                                
@@ -104,7 +105,7 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 <?php if($customer_id )   {?>
-                                <li><a href="{{URL::to('/profile/'.$customer_id)}}"><i class="fa fa-user"></i>Account</a></li>
+                                <li><a href="{{URL::to('/profile/'.$customer_id)}}"><i class="fa fa-user"></i><?php echo  $customer_name; ?></a></li>
 
                             <?php } ?>
 
@@ -193,7 +194,7 @@
                                     
                                 </li> 
                                 
-                                <li><a href="contact-us.html">Contact</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -359,10 +360,10 @@
                              </div>
                              <div class="col-sm-4"style="margin-top:5px;text-align:center;">
                                 <ul >
-                                    <li style="margin:5px;"><a href="#">Contact with us</a><li>
+                                    <li style="margin:5px;"> <font color="green"><b>Contact with us</b></font><li>
                                    <li style="margin:5px;">Plot : 15, Block : B<li>
                                    <li style="margin:5px;">Road : NSU Road<li>
-                                  <li style="margin:5px;"><a href="#">Bashundara R/A</a><li>
+                                  <li style="margin:5px;">Bashundara R/A<li>
                                  
                                  </ul>
                                      </div>

@@ -22,7 +22,7 @@ class HomeController extends Controller
 
     ->select('tbl_products.*','tbl_category.categories_name','tbl_manufacture.manufacture_name')
     ->where('tbl_products.product_status',1)
-    ->limit(6)
+    ->limit(9)
     ->get();
 
       $manage_published_product=view ('pages.home_content')
