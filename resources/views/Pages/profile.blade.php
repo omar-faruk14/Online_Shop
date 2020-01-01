@@ -2,7 +2,7 @@
 @section('content')
 
 
-
+<!-- panel panel-success for user_view_details customer name --> 
  <div class="panel panel-success">
       <div class="panel-heading">{{$user_view_details->customer_name}} Profile</div>
       <div class="panel-body">
@@ -27,7 +27,7 @@
 
            
 
-
+            <!-- cutomer email, mobile number --> 
             <p>
                 <i class="glyphicon glyphicon-envelope"></i>{{$user_view_details->customer_email}}
                 <br />

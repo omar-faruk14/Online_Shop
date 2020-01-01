@@ -3,7 +3,7 @@
 
 
 
-<!-- shipping checkout form -->
+<--shiping chckout form -->
 
 <section id="cart_items">
 		<div class="container">
@@ -23,7 +23,7 @@
 
 
 
-								<!-- main shipping information form -->
+								<!-- main shipping information from -->
 								<form action="/save_shipping_Details" method="post">
 									{{csrf_field()}}
 									

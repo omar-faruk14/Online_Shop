@@ -39,9 +39,7 @@ foreach($all_published_product as $v_product) {?>
 
 
 
-<!-- end feature product raw php code -->
-
-        
+<!-- end feature product raw php code-->     
         
    
 

@@ -9,7 +9,7 @@
 
 
 
-<!-- manufacture Base Product show -->
+<!--manufacture Base Product show -->
 <?php
 
 

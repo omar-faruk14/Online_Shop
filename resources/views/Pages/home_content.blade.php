@@ -11,7 +11,7 @@
 
 
 
-<!-- Single Feature Product Display -->
+<!-- Single feature Product Display -->
 <?php
 
 
